@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning is hard</title>
+    <meta property="og:title" content="Hands-on experience with Gen AI">
+    <meta property="og:description" content="Understand how to use AI effectively for learning without undermining skill acquisition.">
+    <meta property="og:type" content="website">
+    
+    
+<link href="https://fonts.googleapis.com" rel="preconnect" />
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" referrerpolicy="no-referrer" rel="stylesheet" />
+<style type="text/css">
+html{font-size:77%}
+body{margin:0;font-family:'Inter',sans-serif;line-height:1.6;color:#1f2937;background-color:#f3f4f6}
+#gai-wrap{padding:1px 0}
+#gai-wrap .gai-cont{max-width:900px;margin:2rem auto;padding:0 1rem}
+#gai-wrap h1,#gai-wrap h2,#gai-wrap h3,#gai-wrap h4,#gai-wrap h5{margin-top:0;margin-bottom:0.85rem;font-weight:600;color:#111827}
+#gai-wrap h1{font-size:2.0rem;text-align:center;margin-bottom:1.5rem}
+#gai-wrap h2{font-size:1.8rem;margin-bottom:1.25rem;margin-top:2.5rem; border-bottom:2px solid #3b82f6;padding-bottom:0.5rem}
+#gai-wrap .gai-h2-underline{border-bottom:2px solid #3b82f6;padding-bottom:0.5rem}
+#gai-wrap h3{font-size:1.5rem;margin-bottom:1rem;color:#1d4ed8}
+#gai-wrap h4{font-size:1.4rem;margin-bottom:0.75rem;color:#111827}
+#gai-wrap p{margin-bottom:1rem;color:#374151;font-size:1.3rem;line-height:1.6}
+#gai-wrap ul,#gai-wrap ol{list-style-position:outside;padding-left:1.75rem;margin-bottom:1rem}
+#gai-wrap ul li,#gai-wrap ol li{margin-bottom:0.75rem;color:#4b5563;font-size:1.3rem;line-height:1.6}
+#gai-wrap strong{font-weight:600}
+#gai-wrap a{color:#2563eb;text-decoration:none}
+#gai-wrap a:hover{text-decoration:underline;color:#1d4ed8}
+#gai-wrap h1 .genai-custom-icon,#gai-wrap h2 .genai-custom-icon{margin-right:0.75rem;color:#1d4ed8}
+#gai-wrap .gai-h-with-icon{display:flex;align-items:center}
+#gai-wrap .gai-h-with-icon i{margin-right:0.625rem;font-size:1.7rem;color:#2563eb}
+#gai-wrap .gai-content-image{margin:1.25rem 0;padding:0.625rem;background-color:#f9fafb;border:1px solid #e9ecef;border-radius:0.5rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
+#gai-wrap .gai-content-image img{max-width:100%;height:auto;border-radius:0.375rem;display:inline-block;vertical-align:middle}
+#gai-wrap .genai-custom-divider{border:0;height:1px;background-image:linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));margin:3rem 0}
+#gai-wrap .gai-placeholder-link{background-color:#fffbeb;border:1px dashed #f59e0b;padding:0.25rem 0.5rem;border-radius:0.25rem;color:#78350f;font-style:italic;font-size:1.1em;display:inline-block}
+#gai-wrap .gai-box{background-color:#ffffff;padding:1.5rem;border-radius:0.75rem;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06);margin-bottom:2.5rem}
+#gai-wrap .gai-box .gai-h-with-icon i{margin-right:0.625rem;font-size:1.6rem;color:#2563eb}
+#gai-wrap p.no-mb{margin-bottom:0}
+#gai-wrap .gai-str{font-weight:600;color:#2563eb}
+#gai-wrap .gai-gloss{cursor:pointer;text-decoration:underline dotted;color:#2563eb}
+#gai-wrap .gai-icon-bar{display:flex;justify-content:space-around;align-items:flex-start;flex-wrap:wrap;gap:1rem}
+#gai-wrap .gai-icon-item{display:flex;flex-direction:column;align-items:center;width:100px;text-align:center}
+#gai-wrap .gai-icon-item i{font-size:1.7rem;margin-bottom:0.5rem;line-height:1}
+#gai-wrap .gai-icon-item .fa-search{color:#ffc107}
+#gai-wrap .gai-icon-item .fa-tv{color:#dc3545}
+#gai-wrap .gai-icon-item .fa-share-alt{color:#6f42c1}
+#gai-wrap .gai-icon-item .fa-pencil-alt{color:#20c997}
+#gai-wrap .gai-icon-item .fa-graduation-cap{color:#563d7c}
+#gai-wrap .gai-icon-item span{font-size:0.875rem;color:#374151;line-height:1.3}
+#gai-wrap .gai-clmns{display:flex;flex-wrap:wrap;gap:1.5rem;margin-bottom:1rem}
+#gai-wrap .gai-clmn-card{background-color:#f8f9fa;padding:1.25rem;border-radius:0.5rem;box-shadow:0 2px 4px rgba(0,0,0,.05);flex:1 1 300px;min-width:280px}
+#gai-wrap .gai-clmn-card h3{font-weight:500;font-size:1.5rem;color:#2563eb;margin-bottom:0.75rem;display:flex;align-items:center}
+#gai-wrap .gai-clmn-card h3 i{margin-right:0.6rem;font-size:1.4rem}
+#gai-wrap .gai-clmn-card ul{list-style-position:outside;padding-left:1.25rem;margin-bottom:0;list-style-type:disc}
+#gai-wrap .gai-clmn-card li{margin-bottom:0.4rem;color:#4b5563;font-size:1.3rem;line-height:1.5}
+#gai-wrap .gai-end-txt{color:#374151;font-size:1.3rem;line-height:1.6;text-align:left;margin:1.5rem 0.5rem 1rem}
+#gai-wrap .gai-info{background-color:#eff6ff;border-left:4px solid #3b82f6;padding:1.25rem;margin:1.5rem 0;border-radius:0 0.5rem 0.5rem 0;box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}
+#gai-wrap .gai-info h5{font-size:1.6rem;color:#1e3a8a;margin-bottom:0.5rem}
+#gai-wrap .gai-info h5 i{margin-right:0.5rem;color:#3b82f6}
+#gai-wrap .gai-hero-graphic{text-align:center;margin-bottom:2rem;padding:1rem 0}
+#gai-wrap .gai-hero-graphic img{max-width:100%;height:auto;border-radius:0.5rem;box-shadow:0 4px 8px rgba(0,0,0,0.1)}
+#gai-wrap .gai-info ul{list-style-type:none;padding-left:0;margin-top:1rem;margin-bottom:0}
+#gai-wrap .gai-info li{color:#374151;font-size:1.3rem;line-height:1.6;margin-bottom:0.75rem;padding-left:1.75rem;position:relative}
+#gai-wrap .gai-info li::before{content:"\f00c";font-family:"Font Awesome 6 Free";font-weight:900;color:#28a745;position:absolute;left:0;top:0.25rem;font-size:1.3rem}
+#gai-wrap .gai-info li strong{font-weight:600;color:#111827}
+#gai-wrap .gai-box ol{list-style-type:none;padding-left:0;margin-bottom:1rem;counter-reset:gai-ol-counter}
+#gai-wrap .gai-box ol li{margin-bottom:1rem;padding-left:2.8rem;position:relative;font-size:1.3rem;line-height:1.6;color:#374151}
+#gai-wrap .gai-box ol li::before{counter-increment:gai-ol-counter;content:counter(gai-ol-counter);position:absolute;left:0;top:0;background-color:#2563eb;color:#fff;width:30px;height:30px;border-radius:50%;text-align:center;line-height:30px;font-weight:600;font-size:1rem}
+#gai-wrap .gai-box ul{list-style-type:disc;list-style-position:outside;padding-left:1.5rem;margin-bottom:1rem}
+#gai-wrap .gai-box ul li{font-size:1.3rem;line-height:1.6;color:#374151;margin-bottom:0.5rem}
+#gai-wrap .gai-box a,#gai-wrap p a,#gai-wrap .gai-table a{color:#2563eb;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+#gai-wrap .gai-box a:hover,#gai-wrap p a:hover,#gai-wrap .gai-table a:hover{color:#1d4ed8;text-decoration:none}
+#gai-wrap .gai-quick-activity{background-color:#f0f9ff;border-left:4px solid #0ea5e9;padding:1.25rem;margin:1.5rem 0;border-radius:0 0.5rem 0.5rem 0;box-shadow:0 1px 3px 0 rgba(0,0,0,.05),0 1px 2px 0 rgba(0,0,0,.05)}
+#gai-wrap .gai-quick-activity h4{font-size:1.5rem;color:#0369a1;margin-top:0;margin-bottom:0.75rem;font-weight:600}
+#gai-wrap .gai-quick-activity h4 i{margin-right:0.5rem;color:#0ea5e9}
+#gai-wrap .gai-quick-activity p{color:#374151;font-size:1.3rem;margin-bottom:0.625rem}
+#gai-wrap .gai-graphic-idea{display:block;font-style:italic;color:#6b7280;background-color:#f9fafb;padding:0.75rem;border:1px dashed #d1d5db;margin:1rem 0;border-radius:0.375rem;font-size:1.3rem;line-height:1.5}
+#gai-wrap .gai-warning-box{background-color:#fffbeb;border-left:4px solid #f59e0b;padding:1.25rem;margin:1.5rem 0;border-radius:0 0.5rem 0.5rem 0;box-shadow:0 1px 3px 0 rgba(0,0,0,.05),0 1px 2px 0 rgba(0,0,0,.05)}
+#gai-wrap .gai-warning-box p{color:#78350f;font-size:1.3rem;line-height:1.6;margin-bottom:0;font-weight:500}
+#gai-wrap .gai-accordion-item{margin-bottom:0.75rem;border:1px solid #e5e7eb;border-radius:0.375rem;overflow:hidden}
+#gai-wrap .gai-accordion-summary{display:flex;align-items:center;padding:0.75rem 1rem;cursor:pointer;background-color:#f9fafb;font-weight:600;color:#374151;transition:background-color 0.2s ease-in-out;outline:none;list-style:none}
+#gai-wrap .gai-accordion-summary::-webkit-details-marker{display:none}
+#gai-wrap .gai-accordion-summary::marker{display:none}
+#gai-wrap .gai-accordion-summary::before{content:'\f0da';font-family:'Font Awesome 6 Free';font-weight:900;margin-right:0.75rem;transition:transform 0.2s ease-in-out;font-size:1rem}
+#gai-wrap .gai-accordion-item[open] > .gai-accordion-summary::before{transform:rotate(90deg)}
+#gai-wrap .gai-accordion-content{padding:1rem;background-color:#ffffff;border-top:1px solid #e5e7eb;color:#4b5563;font-size:1.3rem;line-height:1.6}
+#gai-wrap .gai-accordion-summary .fa-wrench{color:#2563eb}
+#gai-wrap .gai-accordion-summary .fa-book-open{color:#16a34a}
+#gai-wrap .gai-accordion-summary i.fas,#gai-wrap .gai-accordion-summary i.fab{margin-right:0.5rem;color:#2563eb;font-size:1.1em}
+#gai-wrap .gai-icon-text{margin-left:0.5rem;font-weight:600;font-size:1.125rem}
+#gai-wrap .gai-accordion-summary:focus-visible{outline:2px solid #2563eb;outline-offset:2px;box-shadow:0 0 0 2px #ffffff,0 0 0 4px #2563eb}
+#gai-wrap .gai-accordion-group{margin:1.5rem 0}
+#gai-wrap .gai-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:1.3rem;line-height:1.6;background-color:#fff;box-shadow:0 4px 6px -1px rgba(0,0,0,.05),0 2px 4px -1px rgba(0,0,0,.03);border-radius:0.5rem;overflow:hidden}
+#gai-wrap .gai-table th,#gai-wrap .gai-table td{border:1px solid #e5e7eb;padding:0.75rem 1rem;text-align:left;vertical-align:top;color:#374151}
+#gai-wrap .gai-table th{background-color:#f9fafb;font-weight:600;color:#111827;font-size:1.4rem}
+#gai-wrap .gai-table td ul,#gai-wrap .gai-table td ol{margin-top:0;margin-bottom:0;padding-left:1.5rem}
+#gai-wrap .gai-table td ul li,#gai-wrap .gai-table td ol li{margin-bottom:0.5rem}
+#gai-wrap .gai-table td ol li:last-child,#gai-wrap .gai-table td ul li:last-child{margin-bottom:0}
+#gai-wrap .gai-table .gai-table-stage-column{font-weight:600;width:18%;color:#111827}
+#gai-wrap .gai-table .gai-table-what-you-do-column{width:35%}
+#gai-wrap .gai-table .gai-table-why-it-matters-column{width:22%}
+#gai-wrap .gai-table .gai-table-where-ai-fits-column{width:25%}
+#gai-wrap .gai-table .gai-table-where-ai-fits-column i.fas,#gai-wrap .gai-table .gai-table-where-ai-fits-column .fa-robot{margin-right:0.375rem;color:#2563eb}
+#gai-wrap .gai-table sup{font-size:0.75em;vertical-align:super;line-height:0}
+#gai-wrap .gai-table td ol{list-style-type:none;padding-left:0;counter-reset:gai-table-ol-counter}
+#gai-wrap .gai-table td ol li{padding-left:2.2rem;position:relative}
+#gai-wrap .gai-table td ol li::before{counter-increment:gai-table-ol-counter;content:counter(gai-table-ol-counter);position:absolute;left:0;top:2px;background-color:#2563eb;color:#fff;width:24px;height:24px;border-radius:50%;text-align:center;line-height:24px;font-weight:600;font-size:0.875rem}
+#gai-wrap .gai-table td ul{list-style-type:disc;list-style-position:outside}
+#gai-wrap .genai-custom-info-box{background-color:#e0f2fe;border-left:4px solid #0ea5e9;padding:1.25rem;margin:1.5rem 0;border-radius:0 0.5rem 0.5rem 0;box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}
+#gai-wrap .genai-custom-info-box h5{font-size:1.5rem;color:#0369a1;margin-bottom:0.5rem;font-weight:600}
+#gai-wrap .genai-custom-info-box h5 i{margin-right:0.5rem;color:#0ea5e9}
+#gai-wrap .genai-custom-info-box p{color:#075985;font-size:1.3rem;line-height:1.6;margin-bottom:0}
+#gai-wrap .genai-custom-info-box a{color:#0c4a6e;font-weight:600}
+#gai-wrap .genai-custom-info-box a:hover{color:#075985}
+#gai-wrap .gai-blockquote{margin:1.5em 0;padding:1em 1.5em;border-left:5px solid #f59e0b;background-color:#fffbeb;color:#78350f;border-radius:0.25rem}
+#gai-wrap .gai-blockquote h2{border-bottom:none;margin-bottom:0.5em;color:#78350f}
+#gai-wrap .gai-btn{display:inline-block;text-decoration:none;font-weight:600;padding:0.65em 1.2em;border-radius:0.375rem;transition:background-color 0.2s ease,border-color 0.2s ease,transform 0.1s ease;margin-right:0.5em;margin-bottom:0.5em;cursor:pointer;text-align:center;line-height:1.4;background-color:#e0f2fe;color:#2563eb;border:1px solid #bfdbfe;box-shadow:0 1px 2px rgba(0,0,0,0.05)}
+#gai-wrap .gai-btn:hover{transform:translateY(-1px);background-color:#d1e9fc;border-color:#93c5fd;box-shadow:0 2px 4px rgba(0,0,0,0.1)}
+#gai-wrap .gai-btn i.fas,#gai-wrap .gai-btn i.fab{margin-left:0.5em;font-size:0.9em;color:#2563eb}
+#gai-wrap .gai-box pre{background-color:#f3f4f6;color:#1f2937;font-family:monospace,monospace;padding:1em;border-radius:0.375rem;overflow-x:auto;margin:1em 0;border:1px solid #d1d5db;white-space:pre-wrap;word-wrap:break-word}
+#gai-wrap .gai-box pre code{background-color:transparent;color:inherit;font-family:inherit;padding:0;border-radius:0;border:none}
+#gai-wrap .gai-quick-activity ul{list-style-type:disc;list-style-position:outside;padding-left:1.5rem;margin:0.625rem 0 1rem}
+#gai-wrap .gai-quick-activity ul li{font-size:1.3rem;line-height:1.6;color:#374151;margin-bottom:0.5rem}
+#gai-wrap .gai-accordion-content ul,#gai-wrap .gai-accordion-content ol{padding-left:1.5rem;margin-bottom:1rem}
+#gai-wrap .gai-accordion-content ul li,#gai-wrap .gai-accordion-content ol li{font-size:1.3rem;line-height:1.6;color:#374151;margin-bottom:0.5rem}
+#gai-wrap .gai-accordion-content ul{list-style-type:disc}
+#gai-wrap .gai-accordion-content ol{list-style-type:decimal}
+#gai-wrap .gai-simple-list ol li::before{display:none !important}
+#gai-wrap .gai-module-card{background-color:#f0f9ff;border:1px solid #bae6fd;padding:1.25rem;margin:1rem 0;border-radius:0.5rem}
+#gai-wrap .gai-module-card h4{color:#0369a1;margin-top:0;margin-bottom:0.75rem;font-size:1.4rem}
+#gai-wrap .gai-module-card p{color:#075985;font-size:1.3rem;margin-bottom:0}
+#gai-wrap .gai-inspiration-source{background-color:#fafafa;border:1px solid #e5e5e5;padding:0.75rem 1rem;margin:1rem 0;border-radius:0.375rem;font-size:1.2rem;color:#525252}
+#gai-wrap .gai-inspiration-source i{margin-right:0.5rem;color:#737373}
+#gai-wrap .gai-inspiration-source a{font-weight:600;color:#2563eb}
+#gai-wrap .gai-hero-container{height:300px;margin-bottom:2.5rem;border-radius:0.75rem;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06);overflow:hidden}
+#gai-wrap .gai-hero-img-tag{width:100%;height:100%;object-fit:cover;object-position:center}
+#gai-wrap .gai-workflow-box{background-color:#f9fafb;border:2px dashed #6b7280;padding:1.25rem;margin:1.5rem 0;border-radius:0.5rem}
+#gai-wrap .gai-workflow-box h5{color:#111827;font-size:1.5rem;margin-bottom:0.75rem;font-weight:600}
+#gai-wrap .gai-workflow-box h5 i{margin-right:0.5rem;color:#4b5563}
+#gai-wrap .gai-workflow-box p{color:#374151;font-size:1.3rem;margin-bottom:0.625rem;padding-left:1.75rem}
+#gai-wrap .gai-accordion-special > .gai-accordion-summary{background-color:#f5f3ff;color:#5b21b6}
+#gai-wrap .gai-accordion-special > .gai-accordion-summary::before{color:#6d28d9}
+#gai-wrap .gai-accordion-special > .gai-accordion-summary i.fas{color:#6d28d9}
+#gai-wrap .gai-instructor-notes{background-color:#f0fdf4;border-left:4px solid #22c55e;padding:1.25rem;margin:1.5rem 0;border-radius:0 0.5rem 0.5rem 0}
+#gai-wrap .gai-instructor-notes h5{font-size:1.5rem;color:#166534;margin-top:0;margin-bottom:0.5rem;font-weight:600}
+#gai-wrap .gai-instructor-notes h5 i{margin-right:0.5rem;color:#22c55e}
+#gai-wrap .gai-instructor-notes p{color:#15803d;font-size:1.3rem;line-height:1.6;margin-bottom:0.625rem}
+#gai-wrap .gai-instructor-notes ul{list-style-type:disc;list-style-position:outside;padding-left:1.5rem;margin-bottom:0;margin-top:0.625rem}
+#gai-wrap .gai-instructor-notes ul li{font-size:1.3rem;line-height:1.6;color:#15803d;margin-bottom:0.5rem}
+#gai-wrap .gai-hr{border:none;height:1px;background-color:#e5e7eb;margin:2.5rem 0}
+#gai-wrap .gai-references{margin-top:1.5rem;padding:1rem;background-color:#f9fafb;border-radius:0.375rem}
+#gai-wrap .gai-references h5{font-size:1.4rem;color:#4b5563;margin-bottom:0.75rem;font-weight:600}
+#gai-wrap .gai-references p{font-size:1.2rem;margin-bottom:0.5rem;color:#4b5563}
+#gai-wrap .gai-references a{color:#4b5563;text-decoration:underline}
+#gai-wrap .gai-tool-list{list-style:none;padding-left:0;margin-top:1.5rem}
+#gai-wrap .gai-tool-list li{position:relative;padding-left:1.875rem;margin-bottom:1rem}
+#gai-wrap .gai-tool-list li::before{font-family:'Font Awesome 6 Free';font-weight:900;position:absolute;left:0;top:0.25rem;font-size:1.4rem}
+#gai-wrap .gai-tool-list li.pro::before{content:'\f058';color:#16a34a}
+#gai-wrap .gai-tool-list li.con::before{content:'\f057';color:#dc2626}
+#gai-wrap .gai-tool-list li.tip::before{content:'\f0eb';color:#f59e0b}
+#gai-wrap .gai-tool-list strong{font-weight:600;color:#111827;display:block;margin-bottom:0.25rem}
+#gai-wrap .gai-button-visual{display:inline-flex;align-items:center;background-color:#eef2ff;color:#4338ca;padding:0.375rem 0.75rem;border-radius:0.375rem;font-weight:600;font-size:1.2rem;border:1px solid #c7d2fe}
+#gai-wrap .gai-button-visual i{margin-right:0.5rem}
+#gai-wrap .gai-tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:1.5rem;margin-top:1.5rem}
+#gai-wrap .gai-tool-card{background-color:#ffffff;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -2px rgba(0,0,0,0.1);display:flex;flex-direction:column;height:100%;transition:transform 0.2s ease-in-out,box-shadow 0.2s ease-in-out}
+#gai-wrap .gai-tool-card:hover{transform:translateY(-5px);box-shadow:0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -4px rgba(0,0,0,0.1)}
+#gai-wrap .gai-tool-card h3{font-size:1.5rem;color:#1d4ed8;margin-top:0;margin-bottom:0.75rem;display:flex;align-items:center}
+#gai-wrap .gai-tool-card h3 i{margin-right:0.75rem;color:#2563eb;width:20px;text-align:center}
+#gai-wrap .gai-tool-card p{font-size:1.3rem;color:#4b5563;margin-bottom:1rem;flex-grow:1}
+#gai-wrap .gai-tool-card .gai-tool-meta{font-size:1.2rem;color:#6b7280;border-top:1px solid #e5e7eb;padding-top:1rem;margin-top:auto}
+#gai-wrap .gai-tool-card .gai-tool-meta p{margin-bottom:0.5rem;font-size:1.2rem;color:#6b7280}
+#gai-wrap .gai-tool-card .gai-tool-meta strong{font-weight:600;color:#374151}
+
+</style>
+ 
+</head>
+
+<body>
+    <div id="gai-wrap">
+        <div class="gai-cont">
+
+            <div class="gai-box">
+                <h1><i aria-hidden="true" class="fas fa-chart-line" style="color:#1d4ed8; margin-right: 0.75rem;"></i>Analyze and Apply Gen AI</h1>
+        
+                <div class="gai-hero-graphic"><img alt="An abstract digital landscape representing the jagged frontier of AI, with sharp, unpredictable glowing cyan lines tracing over dark mountains." loading="lazy" src="https://d1qywhc7l90rsa.cloudfront.net/accounts/165495/images/JaggedMountain.png" />
+                </div>
+            
+                <p>Welcome! This module is designed for active learning. Here, you'll gain practical skills by diving straight into using generative AI tools. Expect to spend the majority of your time experimenting: navigating interfaces, constructing and refining prompts, and exploring customization features. Our hands-on approach ensures you build not just knowledge, but the confidence and competence to effectively interact with and leverage these powerful platforms. Let's get started!</p>
+            </div>
+
+            <div class="gai-box">
+                <h2 class="gai-h-with-icon"><i aria-hidden="true" class="fas fa-bullseye"></i>Learning Outcomes</h2>
+
+                <ol>
+                    <li><strong>Navigate the user interface of common generative AI tools</strong> to locate key features for inputting prompts, viewing outputs, and accessing basic settings.</li>
+                    <li><strong>Construct clear, specific, and context-rich prompts</strong> designed to elicit desired responses from generative AI tools for defined tasks.</li>
+                    <li><strong>Employ iterative prompting strategies</strong>, refining and adjusting prompts based on initial AI outputs and analyzing failure points to improve the relevance, accuracy, and quality of generated content.</li>
+                    <li><strong>Utilize platform features for customization</strong> (e.g., custom instructions, creating specialized GPTs/Projects/Gems) to tailor the AI's responses and behavior for specific contexts or recurring tasks.</li>
+                </ol>
+            </div>
+
+            <hr class="gai-hr" />
+
+            <div class="gai-box">
+                <h2>Prompting Challenge</h2>
+                <p>Let's dive into your first hands-on experience interacting with an AI tool.</p>
+            </div>
+
+            <div class="gai-box">
+                <h2 class="gai-h2-underline">Your First AI Interaction: Summarization Challenge</h2>
+                <p><strong>Task:</strong> Select a recent news article or journal finding that interests you. Using one of the generative AI tools linked below, create a concise summary (1-2 paragraphs) of the content. Focus on finding where to input your request and how to view the AI's response. You might need to copy and paste the article text or provide a link if the tool supports it.</p>
+                <h3>Tool Options:</h3>
+                <div>
+                    <a class="gai-btn" href="https://chatgpt.com/" rel="noopener noreferrer" target="_blank">ChatGPT <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+                    <a class="gai-btn" href="https://claude.ai/" rel="noopener noreferrer" target="_blank">Claude <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+                    <a class="gai-btn" href="https://gemini.google.com/" rel="noopener noreferrer" target="_blank">Gemini <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+                </div>
+                <p><em>Feel free to use any tool you have access to.</em></p>
+            </div>
+
+            <div class="gai-quick-activity">
+                <h4><i aria-hidden="true" class="fas fa-lightbulb"></i> Reflect on Your Experience</h4>
+                <p>Take a moment to think about your first attempt. Consider these questions (no need to write answers here, just think them through):</p>
+                <ul>
+                    <li>How easy or difficult was it to find where to enter your prompt (your request) in the AI tool you chose? If you provided the article content, how did you do it (copy/paste, link)?</li>
+                    <li>What specific words or phrases did you use in your first prompt to ask for the summary? (e.g., "Summarize this article", "Give me the main points", "Explain this in simple terms")</li>
+                    <li>Look at the summary the AI generated. How well did it capture the main points of the article? Were there any surprises in the output (accuracy, tone, length)?</li>
+                    <li>Did you feel the need to try again or change your prompt immediately after seeing the first result? Why or why not? What might you change next time?</li>
+                </ul>
+            </div>
+
+            <div class="gai-box">
+                <h2>Quick Debrief and Demo: The Power of Prompting</h2>
+                <p>You've just had your first hands-on experience prompting a generative AI tool. Let's quickly debrief and look at how small changes in your prompt can significantly impact the AI's response.</p>
+            </div>
+
+            <div class="gai-box">
+                <h2>1. Prompting Examples: Basic vs. Detailed</h2>
+                <p>Imagine you are in an environmental science class and have discovered a recent, lengthy report online about a new study on glacier melt. You want a quick summary to understand the key findings to see if it's relebvant to your current topic on climate change impacts before investing time.</p>
+                <p><strong>Basic Prompt:</strong></p>
+                <pre><code>Summarize this article.</code></pre>
+                <p><em>(You would paste the article text or provide a link if the tool supports it)</em></p>
+                <p><em>Potential Outcome:</em> You might get a general summary, but its length, focus, and tone could vary widely. It might be too long, too technical, or miss the points most relevant to educators.</p>
+                <p><strong>Detailed Prompt:</strong></p>
+                <pre><code>Summarize the key findings of the following news report for an environmental science student. The goal is to quickly understand if the report is relevant to a course topic on climate change impacts. Focus specifically on the main data presented and the predicted future impacts discussed in the article. Provide a two sentence summary, 3 key points (as bullet points), and one surprising fact.</code></pre>
+                <p><em>(You would paste the article text or provide a link if your AI tool supports web browsing)</em></p>
+                <p><em>Potential Outcome:</em> This prompt gives the AI much more direction:</p>
+                <ul>
+                    <li><strong>Audience:</strong> "environmental science student" informs the AI about the user's background knowledge and the appropriate level of technical detail.</li>
+                    <li><strong>Goal</strong>:&nbsp;Stating the goal ("quickly understand if the report is relevant...") helps the AI prioritize information pertinent to making that judgment.</li>
+                    <li><strong>Task Focus:</strong>&nbsp;Specifying "main data presented" and "predicted future impacts" directs the AI to extract the most crucial information for the student's purpose.</li>
+                    <li><strong>Format:</strong> "Provide a two sentence summary..." ensures the summary is brief and easy to scan for relevance.</li>
+                </ul>
+                <p>The result is likely to be far more targeted, relevant, and immediately useful for your specific need.</p>
+            </div>
+
+            <div class="gai-quick-activity">
+                <h4>2. Reflect on Your Experience (Think about these questions):</h4>
+                <ul>
+                    <li>Looking back at the "Summarization Challenge" you just completed, how specific was your initial prompt?</li>
+                    <li>Did you provide the AI with context (like who the summary was for, or what points to focus on)?</li>
+                    <li>Compare your first prompt to the "Detailed Prompt" example above. What are the key differences?</li>
+                    <li>How might providing more context, specifying the format, or defining a role for the AI have changed the summary you received in the challenge?</li>
+                    <li>Did the AI's first response make you want to adjust your prompt and try again? (This is iterative prompting in action!)</li>
+                </ul>
+            </div>
+
+            <div class="gai-box">
+                <h2>3. Key Takeaways on Prompting:</h2>
+                <ul>
+                    <li><strong>Specificity Matters:</strong> Vague prompts lead to vague or unpredictable results. Clearly define what you want.</li>
+                    <li><strong>Context is Crucial:</strong> Tell the AI about the audience, the purpose, or the background information it needs to generate a relevant response.</li>
+                    <li><strong>Define the Format:</strong> Do you need bullet points, a paragraph, a table, code? Ask for it explicitly.</li>
+                    <li><strong>Assign a Role (Optional but Powerful):</strong> Asking the AI to "Act as..." can significantly shape the tone, style, and expertise level of the response.</li>
+                    <li><strong>Iteration is Key:</strong> Don't expect the perfect response on the first try. Analyze the output and refine your prompt based on what you see. This aligns with the iterative learning approach we've discussed.</li>
+                </ul>
+                <p>This quick debrief highlights how thoughtful prompting moves you from simply getting <em>an</em> answer to getting the <em>right</em> answer for your specific needs. As you continue through these pathways, you'll develop more advanced prompting strategies.</p>
+            </div>
+
+            <div class="gai-box">
+                <h2>Iterative Prompt Refinement: Guiding the Conversation</h2>
+                <p>You've seen how a detailed prompt gets a better initial response than a vague one. But what happens when even a detailed prompt doesn't quite hit the mark? That's where <strong>Iterative Prompt Refinement</strong> comes in. Think of it less like issuing commands and more like having a <strong>guided conversation</strong> with your AI assistant. Your first prompt starts the conversation, the AI's response gives you feedback, and your refined prompts steer the dialogue until the AI truly understands what you need.</p>
+                <p>Mastering this back-and-forth is key to unlocking the AI's potential for complex or nuanced tasks.</p>
+            </div>
+
+            <div class="gai-box">
+                <h2>Framework: Strategies for a Better AI Conversation</h2>
+                <p>How can you steer the conversation effectively? Here are several strategies to refine your prompts and guide the AI:</p>
+                <ul>
+                    <li><strong>Add/Modify Context:</strong> Like clarifying things for a person, give the AI more background. Specify the intended <strong>audience</strong> (e.g., "Explain this for a beginner"), the <strong>purpose</strong> (e.g., "I need ideas for a presentation slide"), or relevant <strong>details</strong> it might be missing.</li>
+                    <li><strong>Adjust Format/Structure:</strong> Tell the AI *how* you want the information presented. Ask for <strong>bullet points</strong>, a <strong>table</strong>, a specific <strong>length</strong> (e.g., "in under 100 words"), or a certain <strong>structure</strong> (e.g., "pros and cons").</li>
+                    <li><strong>Refine AI Role/Persona:</strong> Ask the AI to adopt a specific viewpoint. Examples: "Act as a skeptical reviewer," "Act as an encouraging tutor," "Adopt the persona of a historian." This shapes the tone and focus.</li>
+                    <li><strong>Provide Examples (Few-Shot Prompting):</strong> Show, don't just tell. Give the AI a small example of the output format or style you're looking for right within your prompt.</li>
+                    <li><strong>Break Down Complexity:</strong> If a task is too big, ask for it piece by piece. "First, list the main themes."..."Okay, now elaborate on the first theme."</li>
+                    <li><strong>Engage in Dialogue (Make it a Two-Way Street):</strong>
+                        <ul>
+                            <li>Prompt the AI to ask <em>you</em> questions: "What other information do you need from me to answer this question effectively?" or "Ask me three questions that would help you refine your response."</li>
+                            <li>Ask the AI to critique itself or your prompt: "Critique your previous response for clarity." or "How could I improve my prompt to get a better explanation?"</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="gai-box">
+                <h2>Examples: Seeing the Conversation Unfold</h2>
+                <p><strong>Example 1: Refining for Audience and Length in Summarization</strong></p>
+                <p><strong>Goal:</strong> Summarize a somewhat technical news article about a new type of solar panel technology so you can quickly explain it to a friend who isn't a science major.</p>
+                <p><strong>Attempt 1 Prompt:</strong></p>
+                <pre><code>Summarize this article about the new perovskite solar panels: [Link to article or pasted text]</code></pre>
+                <p><em>Potential Output:</em> A summary that accurately covers the technical details but uses jargon (like "band gap," "efficiency ratings," "fabrication methods") and might be several paragraphs long.</p>
+                <p><strong>Possible Critique:</strong> Too technical for my friend, and longer than needed for a quick explanation.</p>
+                <p><strong>Refinement Strategy Used:</strong> Add Context (Audience), Adjust Format (Length).</p>
+                <p><strong>Attempt 2 Prompt (Refined):</strong></p>
+                <pre><code>Summarize this article about the new perovskite solar panels, but explain it in simple terms for someone without a science background. Keep the summary under 75 words.</code></pre>
+                <p><em>Potential Output:</em> A much shorter, simpler summary focusing on the key benefit (e.g., "Scientists developed new solar panels that are cheaper and easier to make, potentially making solar energy more accessible") without the heavy technical terms.</p>
+                <p><strong>Example 2: Refining for Specific Focus in Summarization</strong></p>
+                <p><strong>Goal:</strong> You need to understand the main arguments presented in a long opinion piece about the future of remote work, specifically focusing on the impact on city planning.</p>
+                <p><strong>Attempt 1 Prompt:</strong></p>
+                <pre><code>Summarize the main points of this article about the future of remote work: [Link or text]</code></pre>
+                <p><em>Potential Output:</em> A general summary covering various aspects like employee productivity, company culture, economic shifts, and maybe a brief mention of urban impact.</p>
+                <p><strong>Critique:</strong> Covers too much; I only need the parts relevant to city planning for my specific interest/project.</p>
+                <p><strong>Refinement Strategy Used:</strong> Add/Modify Context (Focus).</p>
+                <p><strong>Attempt 2 Prompt (Refined):</strong></p>
+                <pre><code>Summarize the arguments this article makes about how the rise of remote work could impact city planning and urban development. Focus only on that aspect.</code></pre>
+                <p><em>Potential Output:</em> A targeted summary discussing points like potential changes in transportation needs, the repurposing of office buildings, shifts in residential patterns, and the economic impact on downtown areas, ignoring the other topics from the article.</p>
+                <p><em>Next Step:</em> This focused summary is much more useful for the user's specific need than the general summary from the first attempt.</p>
+            </div>
+
+            <div class="gai-box">
+                <h2>Practice Area: Your Turn to Guide the Conversation</h2>
+                <p>Now it's your turn to practice refining prompts. Think of it as steering the AI through conversation.</p>
+                <ol>
+                    <li><strong>Choose a Task:</strong> Pick something relevant to your studies where an AI could assist (e.g., explaining a difficult concept from class, brainstorming arguments for a debate topic, drafting an email to a professor, summarizing a complex reading *for a specific purpose* like finding key data points).</li>
+                    <li><strong>Start the Conversation:</strong> Write your initial prompt in one of the AI tools linked below.</li>
+                    <li><strong>Analyze the Response:</strong> Read the AI's first output. Is it exactly what you wanted? Probably not! Where does it fall short? (Too vague? Wrong tone? Missing key info? Wrong format?)</li>
+                    <li><strong>Choose Your Next Move:</strong> Select 1-2 refinement strategies from the Framework list above. How can you clarify or redirect the AI? Consider getting it to ask you clarifying questions!</li>
+                    <li><strong>Continue the Conversation:</strong> Write and submit your refined prompt based on the strategy you chose.</li>
+                    <li><strong>Compare Outputs:</strong> Look at the first and second responses side-by-side. Did the conversation move in the right direction? How did your refinement change the outcome?</li>
+                    <li><strong>Keep Chatting (Optional):</strong> If it's still not quite right, repeat steps 4-6. Sometimes it takes a few exchanges to get the AI aligned with your goal.</li>
+                </ol>
+                <p><strong>AI Tools for Practice:</strong></p>
+                <div>
+                    <a class="gai-btn" href="https://chatgpt.com/" rel="noopener noreferrer" target="_blank">ChatGPT <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+                    <a class="gai-btn" href="https://claude.ai/" rel="noopener noreferrer" target="_blank">Claude <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+                    <a class="gai-btn" href="https://gemini.google.com/" rel="noopener noreferrer" target="_blank">Gemini <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+                    <a class="gai-btn" href="https://www.perplexity.ai/" rel="noopener noreferrer" target="_blank">Perplexity <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+                </div>
+        
+                <p><em>(Feel free to use any generative AI chat tool you have access to.)</em></p>
+            </div>
+
+            <div class="gai-box">
+                <h3>Keep Track: Your Conversation Log (Optional)</h3>
+                <p>It's helpful to note down how your conversation with the AI progresses. This helps you learn which refinement strategies work best for different situations. You can use a simple structure like this:</p>
+                <ul>
+                    <li><strong>My Goal:</strong> [What I wanted the AI to do]</li>
+                    <li><strong>Conversation Turn 1 (My Prompt):</strong> [My first prompt]</li>
+                    <li><strong>Conversation Turn 1 (AI Response Critique):</strong> [What was good/bad about the AI's reply?]</li>
+                    <li><strong>My Strategy for Turn 2:</strong> [Which refinement technique did I choose?]</li>
+                    <li><strong>Conversation Turn 2 (My Prompt):</strong> [My refined prompt]</li>
+                    <li><strong>Conversation Turn 2 (AI Response Critique):</strong> [How did this response improve? Still missing anything?]</li>
+                    <li><em>(Continue logging turns as needed)</em></li>
+                </ul>
+            </div>
+
+            <div class="gai-box">
+                <h3>Visualizing Improvement: The Conversation Flow</h3>
+                <p>Think of this iterative process like charting the flow of your conversation. Each refinement is a step towards clearer communication and a better final outcome. While we don't have an automated visual tracker here, using the log above helps you mentally map out how you guided the AI from its initial response to the more useful information you needed.</p>
+            </div>
+
+            <div class="gai-box">
+                <h2>Example Benchmarks</h2>
+            <div class="gai-accordion-group">
+                <details class="gai-accordion-item"><summary class="gai-accordion-summary"><i class="fas fa-graduation-cap"></i> General Knowledge &amp; Academic Exams</summary>
+                
+                <div class="gai-accordion-content">
+                <p><strong>MMLU (Massive Multitask Language Understanding):</strong> Tests knowledge across 57 subjects from elementary to professional level through multiple-choice questions. Think of it as a comprehensive general knowledge exam that covers everything from basic math to advanced law.</p>
+                
+                <p><strong>AGIEval:</strong> Uses real standardized exams like the SAT, LSAT, and GRE. This benchmark tells us how well AI performs on the same tests humans take for college and graduate school admissions.</p>
+                
+                <p><strong>Other Benchmarks in this category:</strong> RACE (Reading Comprehension from Examinations), Humanities Last Exam (designed as a &quot;final exam&quot; before human-level intelligence)</p>
+                
+                <div class="gai-info">
+                <p><strong>Why it matters:</strong> Shows breadth of knowledge but doesn&#39;t guarantee practical application or true understanding.</p>
+                </div>
+                </div>
+                </details>
+                
+                <details class="gai-accordion-item"><summary class="gai-accordion-summary"><i class="fas fa-brain"></i> Reasoning &amp; Truthfulness</summary>
+                
+                <div class="gai-accordion-content">
+                <p><strong>TruthfulQA:</strong> Contains 817 questions specifically designed to elicit common misconceptions and falsehoods. It tests whether AI will confidently state incorrect &quot;facts&quot; that sound plausible.</p>
+                
+                <p><strong>HellaSwag:</strong> Evaluates common-sense reasoning about everyday scenarios through story completion tasks. Can the AI predict what happens next in ordinary situations?</p>
+                
+                <p><strong>Other Benchmarks in this category:</strong> GPQA (Graduate-Level Google-Proof Q&amp;A), BIG-bench (200+ diverse reasoning tasks), ARC (AI2 Reasoning Challenge for grade-school science)</p>
+                
+                <div class="gai-info">
+                <p><strong>Why it matters:</strong> Reveals tendency to hallucinate or perpetuate misinformation, critical for trust and reliability.</p>
+                </div>
+                </div>
+                </details>
+                
+                <details class="gai-accordion-item"><summary class="gai-accordion-summary"><i class="fas fa-code"></i> Software Engineering &amp; Code</summary>
+                
+                <div class="gai-accordion-content">
+                <p><strong>HumanEval:</strong> The gold standard with 164 programming problems. It&#39;s become the industry baseline for measuring code generation capabilities.</p>
+                
+                <p><strong>SWE-bench:</strong> Tests real-world programming by having AI solve actual GitHub issues. The model must understand the codebase, identify the problem, and write a working patch.</p>
+                
+                <p><strong>Other Benchmarks in this category:</strong> BigCodeBench (more challenging than HumanEval, better at distinguishing top-tier models)</p>
+                
+                <div class="gai-info">
+                <p><strong>Why it matters:</strong> Measures practical coding ability, not just syntax knowledge&mdash;can it actually help you program?</p>
+                </div>
+                </div>
+                </details>
+                
+                <details class="gai-accordion-item"><summary class="gai-accordion-summary"><i class="fas fa-comments"></i> Conversational Quality</summary>
+                
+                <div class="gai-accordion-content">
+                <p><strong>MT-Bench:</strong> Evaluates multi-turn dialogue across reasoning, math, coding, and roleplay. Judges score paired outputs to determine which is better.</p>
+                
+                <p><strong>Chatbot Arena (LMArena):</strong> Real users vote on which model gives better responses in head-to-head comparisons, without knowing which model is which.</p>
+                
+                <div class="gai-info">
+                <p><strong>Why it matters:</strong> Captures subjective quality that automated tests miss&mdash;the &quot;feel&quot; of talking to the AI.</p>
+                </div>
+                </div>
+                </details>
+                
+                <details class="gai-accordion-item"><summary class="gai-accordion-summary"><i class="fas fa-images"></i> Multimodal &amp; Specialized</summary>
+                
+                <div class="gai-accordion-content">
+                <p><strong>MMMU (Massive Multi-discipline Multimodal Understanding):</strong> Extension of MMLU that includes images, diagrams, and charts. Critical for evaluating modern multimodal models.</p>
+                
+                <p><strong>Other Benchmarks in this category:</strong> Kaggle Game Arena (strategic reasoning through game-playing), HELM (Holistic Evaluation across multiple metrics including fairness and bias)</p>
+                
+                <div class="gai-info">
+                <p><strong>Why it matters:</strong> Tests whether AI can work with real-world content that combines text and visuals.</p>
+                </div>
+                </div>
+                </details>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+</html>
