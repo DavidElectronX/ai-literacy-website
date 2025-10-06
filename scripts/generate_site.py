@@ -353,7 +353,7 @@ def build_pages() -> None:
     for alias_id, alias_title in ID_ALIASES.items():
         if alias_title in PAGE_BY_TITLE:
             id_to_slug[alias_id] = PAGE_BY_TITLE[alias_title].slug
-    site_dir = Path("site")
+    site_dir = Path("docs")
     site_dir.mkdir(parents=True, exist_ok=True)
 
     for title, fragment in fragments.items():
