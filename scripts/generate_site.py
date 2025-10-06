@@ -35,8 +35,9 @@ class Page:
         return cls(title=title, slug=slugify(title), children=tuple(children or ()))
 
 SITE_PAGES: Tuple[Page, ...] = (
-    Page.build(
-        "Pillars of AI Literacy",
+    Page(
+        title="Pillars of AI Literacy",
+        slug="index",
     ),
     Page.build(
         "Authentic Learning and AI Use",
@@ -233,8 +234,8 @@ def update_internal_links(content: str, id_to_slug: Dict[str, str]) -> str:
         return f"{slug}.html{suffix}"
 
     content = INTERNAL_GUIDE_PATTERN.sub(lambda m: replace(m), content)
-    content = LIBGUIDE_HOME_PATTERN.sub(lambda m: f"pillars-of-ai-literacy.html{m.group(1) or ''}", content)
-    content = LIBGUIDE_PAGE_PATTERN.sub(lambda m: f"pillars-of-ai-literacy.html{m.group(1) or ''}", content)
+    content = LIBGUIDE_HOME_PATTERN.sub(lambda m: f"index.html{m.group(1) or ''}", content)
+    content = LIBGUIDE_PAGE_PATTERN.sub(lambda m: f"index.html{m.group(1) or ''}", content)
 
     def replace_hash(match: re.Match[str]) -> str:
         page_id, anchor = match.groups()
@@ -295,7 +296,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <body>
     <header>
         <div class=\"site-title\">
-            <h1><a href=\"pillars-of-ai-literacy.html\">AI Literacy for Students</a></h1>
+            <h1><a href=\"index.html\">AI Literacy for Students</a></h1>
             <p class=\"tagline\">Understand, explore, and apply generative AI responsibly.</p>
         </div>
     </header>
