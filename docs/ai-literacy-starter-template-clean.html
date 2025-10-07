@@ -1,294 +1,864 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learning is hard</title>
-    <meta property="og:title" content="Hands-on experience with Gen AI" />
-    <meta property="og:description" content="Understand how to use AI effectively for learning without undermining skill acquisition." />
-    <meta property="og:type" content="website" />
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" referrerpolicy="no-referrer" rel="stylesheet" />
-    <link rel="stylesheet" href="styles-base.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      Learning is hard
+    </title>
+    <meta property="og:title" content="Hands-on experience with Gen AI">
+    <meta property="og:description" content="Understand how to use AI effectively for learning without undermining skill acquisition.">
+    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" referrerpolicy="no-referrer" rel="stylesheet">
+    <link rel="stylesheet" href="styles-base.css">
+  </head>
+  <body>
     <div id="gai-wrap">
-        <header class="gai-cont">
-            <div class="gai-box">
-                <h1><i aria-hidden="true" class="fas fa-chart-line genai-custom-icon"></i>Analyze and Apply Gen AI</h1>
-                <div class="gai-hero-graphic">
-                    <img alt="An abstract digital landscape representing the jagged frontier of AI, with sharp, unpredictable glowing cyan lines tracing over dark mountains." loading="lazy" src="https://d1qywhc7l90rsa.cloudfront.net/accounts/165495/images/JaggedMountain.png" />
+      <header class="gai-cont">
+        <div class="gai-box">
+          <h1>
+            <i aria-hidden="true" class="fas fa-chart-line genai-custom-icon"></i>
+            Analyze and Apply Gen AI
+          </h1>
+          <div class="gai-hero-graphic">
+            <img alt="An abstract digital landscape representing the jagged frontier of AI, with sharp, unpredictable glowing cyan lines tracing over dark mountains." loading="lazy" src="https://d1qywhc7l90rsa.cloudfront.net/accounts/165495/images/JaggedMountain.png">
+          </div>
+          <p>
+            Welcome! This module is designed for active learning. Here, you'll gain practical skills by diving straight into using generative AI tools. Expect to spend the majority of your time experimenting: navigating interfaces, constructing and refining prompts, and exploring customization features. Our hands-on approach ensures you build not just knowledge, but the confidence and competence to effectively interact with and leverage these powerful platforms. Let's get started!
+          </p>
+        </div>
+      </header>
+      <nav class="gai-cont" aria-label="Module sections">
+        <div class="gai-box">
+          <h2 class="gai-h-with-icon">
+            <i aria-hidden="true" class="fas fa-location-arrow"></i>
+            Explore This Template
+          </h2>
+          <div>
+            <a class="gai-btn" href="#learning-outcomes">
+              Learning Outcomes
+              <i aria-hidden="true" class="fas fa-arrow-down"></i>
+            </a>
+            <a class="gai-btn" href="#prompting-challenge">
+              Prompting Challenge
+              <i aria-hidden="true" class="fas fa-arrow-down"></i>
+            </a>
+            <a class="gai-btn" href="#prompting-examples">
+              Prompting Examples
+              <i aria-hidden="true" class="fas fa-arrow-down"></i>
+            </a>
+            <a class="gai-btn" href="#refinement-framework">
+              Refinement Framework
+              <i aria-hidden="true" class="fas fa-arrow-down"></i>
+            </a>
+            <a class="gai-btn" href="#practice-area">
+              Practice Area
+              <i aria-hidden="true" class="fas fa-arrow-down"></i>
+            </a>
+            <a class="gai-btn" href="#example-benchmarks">
+              Example Benchmarks
+              <i aria-hidden="true" class="fas fa-arrow-down"></i>
+            </a>
+          </div>
+          <p class="no-mb">
+            <em>
+              Use these quick links to jump to each highlighted example that demonstrates how
+              <code>styles-base.css</code>
+              can be applied.
+            </em>
+          </p>
+        </div>
+      </nav>
+      <main>
+        <div class="gai-cont">
+          <section class="gai-box" id="learning-outcomes">
+            <h2 class="gai-h-with-icon">
+              <i aria-hidden="true" class="fas fa-bullseye"></i>
+              Learning Outcomes
+            </h2>
+            <ol>
+              <li>
+                <strong>
+                  Navigate the user interface of common generative AI tools
+                </strong>
+                to locate key features for inputting prompts, viewing outputs, and accessing basic settings.
+              </li>
+              <li>
+                <strong>
+                  Construct clear, specific, and context-rich prompts
+                </strong>
+                designed to elicit desired responses from generative AI tools for defined tasks.
+              </li>
+              <li>
+                <strong>
+                  Employ iterative prompting strategies
+                </strong>
+                , refining and adjusting prompts based on initial AI outputs and analyzing failure points to improve the relevance, accuracy, and quality of generated content.
+              </li>
+              <li>
+                <strong>
+                  Utilize platform features for customization
+                </strong>
+                (e.g., custom instructions, creating specialized GPTs/Projects/Gems) to tailor the AI's responses and behavior for specific contexts or recurring tasks.
+              </li>
+            </ol>
+          </section>
+          <hr class="gai-hr">
+          <section class="gai-box" id="prompting-challenge">
+            <h2>
+              Prompting Challenge
+            </h2>
+            <p>
+              Let's dive into your first hands-on experience interacting with an AI tool.
+            </p>
+          </section>
+          <section class="gai-box" id="summarization-challenge">
+            <h2 class="gai-h2-underline">
+              Your First AI Interaction: Summarization Challenge
+            </h2>
+            <p>
+              <strong>
+                Task:
+              </strong>
+              Select a recent news article or journal finding that interests you. Using one of the generative AI tools linked below, create a concise summary (1-2 paragraphs) of the content. Focus on finding where to input your request and how to view the AI's response. You might need to copy and paste the article text or provide a link if the tool supports it.
+            </p>
+            <h3>
+              Tool Options:
+            </h3>
+            <div>
+              <a class="gai-btn" href="https://chatgpt.com/" rel="noopener noreferrer" target="_blank">
+                ChatGPT
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+              </a>
+              <a class="gai-btn" href="https://claude.ai/" rel="noopener noreferrer" target="_blank">
+                Claude
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+              </a>
+              <a class="gai-btn" href="https://gemini.google.com/" rel="noopener noreferrer" target="_blank">
+                Gemini
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+            <p>
+              <em>
+                Feel free to use any tool you have access to.
+              </em>
+            </p>
+          </section>
+          <aside class="gai-quick-activity" id="reflection-1">
+            <h3>
+              <i aria-hidden="true" class="fas fa-lightbulb"></i>
+              Reflect on Your Experience
+            </h3>
+            <p>
+              Take a moment to think about your first attempt. Consider these questions (no need to write answers here, just think them through):
+            </p>
+            <ul>
+              <li>
+                How easy or difficult was it to find where to enter your prompt (your request) in the AI tool you chose? If you provided the article content, how did you do it (copy/paste, link)?
+              </li>
+              <li>
+                What specific words or phrases did you use in your first prompt to ask for the summary? (e.g., "Summarize this article", "Give me the main points", "Explain this in simple terms")
+              </li>
+              <li>
+                Look at the summary the AI generated. How well did it capture the main points of the article? Were there any surprises in the output (accuracy, tone, length)?
+              </li>
+              <li>
+                Did you feel the need to try again or change your prompt immediately after seeing the first result? Why or why not? What might you change next time?
+              </li>
+            </ul>
+          </aside>
+          <section class="gai-box" id="debrief">
+            <h2>
+              Quick Debrief and Demo: The Power of Prompting
+            </h2>
+            <p>
+              You've just had your first hands-on experience prompting a generative AI tool. Let's quickly debrief and look at how small changes in your prompt can significantly impact the AI's response.
+            </p>
+          </section>
+          <section class="gai-box" id="prompting-examples">
+            <h2>
+              1. Prompting Examples: Basic vs. Detailed
+            </h2>
+            <p>
+              Imagine you are in an environmental science class and have discovered a recent, lengthy report online about a new study on glacier melt. You want a quick summary to understand the key findings to see if it's relebvant to your current topic on climate change impacts before investing time.
+            </p>
+            <p>
+              <strong>
+                Basic Prompt:
+              </strong>
+            </p>
+            <pre>              <code>Summarize this article.</code></pre>
+            <p>
+              <em>
+                (You would paste the article text or provide a link if the tool supports it)
+              </em>
+            </p>
+            <p>
+              <em>
+                Potential Outcome:
+              </em>
+              You might get a general summary, but its length, focus, and tone could vary widely. It might be too long, too technical, or miss the points most relevant to educators.
+            </p>
+            <p>
+              <strong>
+                Detailed Prompt:
+              </strong>
+            </p>
+            <pre>              <code>Summarize the key findings of the following news report for an environmental science student. The goal is to quickly understand if the report is relevant to a course topic on climate change impacts. Focus specifically on the main data presented and the predicted future impacts discussed in the article. Provide a two sentence summary, 3 key points (as bullet points), and one surprising fact.</code></pre>
+            <p>
+              <em>
+                (You would paste the article text or provide a link if your AI tool supports web browsing)
+              </em>
+            </p>
+            <p>
+              <em>
+                Potential Outcome:
+              </em>
+              This prompt gives the AI much more direction:
+            </p>
+            <ul>
+              <li>
+                <strong>
+                  Audience:
+                </strong>
+                "environmental science student" informs the AI about the user's background knowledge and the appropriate level of technical detail.
+              </li>
+              <li>
+                <strong>
+                  Goal
+                </strong>
+                : Stating the goal ("quickly understand if the report is relevant...") helps the AI prioritize information pertinent to making that judgment.
+              </li>
+              <li>
+                <strong>
+                  Task Focus:
+                </strong>
+                Specifying "main data presented" and "predicted future impacts" directs the AI to extract the most crucial information for the student's purpose.
+              </li>
+              <li>
+                <strong>
+                  Format:
+                </strong>
+                "Provide a two sentence summary..." ensures the summary is brief and easy to scan for relevance.
+              </li>
+            </ul>
+            <p>
+              The result is likely to be far more targeted, relevant, and immediately useful for your specific need.
+            </p>
+          </section>
+          <aside class="gai-quick-activity" id="reflection-2">
+            <h3>
+              2. Reflect on Your Experience (Think about these questions):
+            </h3>
+            <ul>
+              <li>
+                Looking back at the "Summarization Challenge" you just completed, how specific was your initial prompt?
+              </li>
+              <li>
+                Did you provide the AI with context (like who the summary was for, or what points to focus on)?
+              </li>
+              <li>
+                Compare your first prompt to the "Detailed Prompt" example above. What are the key differences?
+              </li>
+              <li>
+                How might providing more context, specifying the format, or defining a role for the AI have changed the summary you received in the challenge?
+              </li>
+              <li>
+                Did the AI's first response make you want to adjust your prompt and try again? (This is iterative prompting in action!)
+              </li>
+            </ul>
+          </aside>
+          <section class="gai-box" id="key-takeaways">
+            <h2>
+              3. Key Takeaways on Prompting:
+            </h2>
+            <ul>
+              <li>
+                <strong>
+                  Specificity Matters:
+                </strong>
+                Vague prompts lead to vague or unpredictable results. Clearly define what you want.
+              </li>
+              <li>
+                <strong>
+                  Context is Crucial:
+                </strong>
+                Tell the AI about the audience, the purpose, or the background information it needs to generate a relevant response.
+              </li>
+              <li>
+                <strong>
+                  Define the Format:
+                </strong>
+                Do you need bullet points, a paragraph, a table, code? Ask for it explicitly.
+              </li>
+              <li>
+                <strong>
+                  Assign a Role (Optional but Powerful):
+                </strong>
+                Asking the AI to "Act as..." can significantly shape the tone, style, and expertise level of the response.
+              </li>
+              <li>
+                <strong>
+                  Iteration is Key:
+                </strong>
+                Don't expect the perfect response on the first try. Analyze the output and refine your prompt based on what you see. This aligns with the iterative learning approach we've discussed.
+              </li>
+            </ul>
+            <p>
+              This quick debrief highlights how thoughtful prompting moves you from simply getting
+              <em>
+                an
+              </em>
+              answer to getting the
+              <em>
+                right
+              </em>
+              answer for your specific needs. As you continue through these pathways, you'll develop more advanced prompting strategies.
+            </p>
+          </section>
+          <section class="gai-box" id="iterative-refinement">
+            <h2>
+              Iterative Prompt Refinement: Guiding the Conversation
+            </h2>
+            <p>
+              You've seen how a detailed prompt gets a better initial response than a vague one. But what happens when even a detailed prompt doesn't quite hit the mark? That's where
+              <strong>
+                Iterative Prompt Refinement
+              </strong>
+              comes in. Think of it less like issuing commands and more like having a
+              <strong>
+                guided conversation
+              </strong>
+              with your AI assistant. Your first prompt starts the conversation, the AI's response gives you feedback, and your refined prompts steer the dialogue until the AI truly understands what you need.
+            </p>
+            <p>
+              Mastering this back-and-forth is key to unlocking the AI's potential for complex or nuanced tasks.
+            </p>
+          </section>
+          <section class="gai-box" id="refinement-framework">
+            <h2>
+              Framework: Strategies for a Better AI Conversation
+            </h2>
+            <p>
+              How can you steer the conversation effectively? Here are several strategies to refine your prompts and guide the AI:
+            </p>
+            <ul>
+              <li>
+                <strong>
+                  Add/Modify Context:
+                </strong>
+                Like clarifying things for a person, give the AI more background. Specify the intended
+                <strong>
+                  audience
+                </strong>
+                (e.g., "Explain this for a beginner"), the
+                <strong>
+                  purpose
+                </strong>
+                (e.g., "I need ideas for a presentation slide"), or relevant
+                <strong>
+                  details
+                </strong>
+                it might be missing.
+              </li>
+              <li>
+                <strong>
+                  Adjust Format/Structure:
+                </strong>
+                Tell the AI
+                <em>
+                  how
+                </em>
+                you want the information presented. Ask for
+                <strong>
+                  bullet points
+                </strong>
+                , a
+                <strong>
+                  table
+                </strong>
+                , a specific
+                <strong>
+                  length
+                </strong>
+                (e.g., "in under 100 words"), or a certain
+                <strong>
+                  structure
+                </strong>
+                (e.g., "pros and cons").
+              </li>
+              <li>
+                <strong>
+                  Refine AI Role/Persona:
+                </strong>
+                Ask the AI to adopt a specific viewpoint. Examples: "Act as a skeptical reviewer," "Act as an encouraging tutor," "Adopt the persona of a historian." This shapes the tone and focus.
+              </li>
+              <li>
+                <strong>
+                  Provide Examples (Few-Shot Prompting):
+                </strong>
+                Show, don't just tell. Give the AI a small example of the output format or style you're looking for right within your prompt.
+              </li>
+              <li>
+                <strong>
+                  Break Down Complexity:
+                </strong>
+                If a task is too big, ask for it piece by piece. "First, list the main themes."..."Okay, now elaborate on the first theme."
+              </li>
+              <li>
+                <strong>
+                  Engage in Dialogue (Make it a Two-Way Street):
+                </strong>
+                <ul>
+                  <li>
+                    Prompt the AI to ask
+                    <em>
+                      you
+                    </em>
+                    questions: "What other information do you need from me to answer this question effectively?" or "Ask me three questions that would help you refine your response."
+                  </li>
+                  <li>
+                    Ask the AI to critique itself or your prompt: "Critique your previous response for clarity." or "How could I improve my prompt to get a better explanation?"
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section class="gai-box" id="conversation-examples">
+            <h2>
+              Examples: Seeing the Conversation Unfold
+            </h2>
+            <p>
+              <strong>
+                Example 1: Refining for Audience and Length in Summarization
+              </strong>
+            </p>
+            <p>
+              <strong>
+                Goal:
+              </strong>
+              Summarize a somewhat technical news article about a new type of solar panel technology so you can quickly explain it to a friend who isn't a science major.
+            </p>
+            <p>
+              <strong>
+                Attempt 1 Prompt:
+              </strong>
+            </p>
+            <pre>              <code>Summarize this article about the new perovskite solar panels: [Link to article or pasted text]</code></pre>
+            <p>
+              <em>
+                Potential Output:
+              </em>
+              A summary that accurately covers the technical details but uses jargon (like "band gap," "efficiency ratings," "fabrication methods") and might be several paragraphs long.
+            </p>
+            <p>
+              <strong>
+                Possible Critique:
+              </strong>
+              Too technical for my friend, and longer than needed for a quick explanation.
+            </p>
+            <p>
+              <strong>
+                Refinement Strategy Used:
+              </strong>
+              Add Context (Audience), Adjust Format (Length).
+            </p>
+            <p>
+              <strong>
+                Attempt 2 Prompt (Refined):
+              </strong>
+            </p>
+            <pre>              <code>Summarize this article about the new perovskite solar panels, but explain it in simple terms for someone without a science background. Keep the summary under 75 words.</code></pre>
+            <p>
+              <em>
+                Potential Output:
+              </em>
+              A much shorter, simpler summary focusing on the key benefit (e.g., "Scientists developed new solar panels that are cheaper and easier to make, potentially making solar energy more accessible") without the heavy technical terms.
+            </p>
+            <p>
+              <strong>
+                Example 2: Refining for Specific Focus in Summarization
+              </strong>
+            </p>
+            <p>
+              <strong>
+                Goal:
+              </strong>
+              Summarize a broad article about how remote work is changing the future of work, but you only care about its impact on city planning and urban development.
+            </p>
+            <p>
+              <strong>
+                Attempt 1 Prompt:
+              </strong>
+            </p>
+            <pre>              <code>Summarize the main points of this article about the future of remote work: [Link or text]</code></pre>
+            <p>
+              <em>
+                Potential Output:
+              </em>
+              A general summary covering various aspects like employee productivity, company culture, economic shifts, and maybe a brief mention of urban impact.
+            </p>
+            <p>
+              <strong>
+                Critique:
+              </strong>
+              Covers too much; I only need the parts relevant to city planning for my specific interest/project.
+            </p>
+            <p>
+              <strong>
+                Refinement Strategy Used:
+              </strong>
+              Add/Modify Context (Focus).
+            </p>
+            <p>
+              <strong>
+                Attempt 2 Prompt (Refined):
+              </strong>
+            </p>
+            <pre>              <code>Summarize the arguments this article makes about how the rise of remote work could impact city planning and urban development. Focus only on that aspect.</code></pre>
+            <p>
+              <em>
+                Potential Output:
+              </em>
+              A targeted summary discussing points like potential changes in transportation needs, the repurposing of office buildings, shifts in residential patterns, and the economic impact on downtown areas, ignoring the other topics from the article.
+            </p>
+            <p>
+              <em>
+                Next Step:
+              </em>
+              This focused summary is much more useful for the user's specific need than the general summary from the first attempt.
+            </p>
+          </section>
+          <section class="gai-box" id="practice-area">
+            <h2>
+              Practice Area: Your Turn to Guide the Conversation
+            </h2>
+            <p>
+              Now it's your turn to practice refining prompts. Think of it as steering the AI through conversation.
+            </p>
+            <ol>
+              <li>
+                <strong>
+                  Choose a Task:
+                </strong>
+                Pick something relevant to your studies where an AI could assist (e.g., explaining a difficult concept from class, brainstorming arguments for a debate topic, drafting an email to a professor, summarizing a complex reading
+                <em>
+                  for a specific purpose
+                </em>
+                like finding key data points).
+              </li>
+              <li>
+                <strong>
+                  Start the Conversation:
+                </strong>
+                Write your initial prompt in one of the AI tools linked below.
+              </li>
+              <li>
+                <strong>
+                  Analyze the Response:
+                </strong>
+                Read the AI's first output. Is it exactly what you wanted? Probably not! Where does it fall short? (Too vague? Wrong tone? Missing key info? Wrong format?)
+              </li>
+              <li>
+                <strong>
+                  Choose Your Next Move:
+                </strong>
+                Select 1-2 refinement strategies from the Framework list above. How can you clarify or redirect the AI? Consider getting it to ask you clarifying questions!
+              </li>
+              <li>
+                <strong>
+                  Continue the Conversation:
+                </strong>
+                Write and submit your refined prompt based on the strategy you chose.
+              </li>
+              <li>
+                <strong>
+                  Compare Outputs:
+                </strong>
+                Look at the first and second responses side-by-side. Did the conversation move in the right direction? How did your refinement change the outcome?
+              </li>
+              <li>
+                <strong>
+                  Keep Chatting (Optional):
+                </strong>
+                If it's still not quite right, repeat steps 4-6. Sometimes it takes a few exchanges to get the AI aligned with your goal.
+              </li>
+            </ol>
+            <p>
+              <strong>
+                AI Tools for Practice:
+              </strong>
+            </p>
+            <div>
+              <a class="gai-btn" href="https://chatgpt.com/" rel="noopener noreferrer" target="_blank">
+                ChatGPT
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+              </a>
+              <a class="gai-btn" href="https://claude.ai/" rel="noopener noreferrer" target="_blank">
+                Claude
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+              </a>
+              <a class="gai-btn" href="https://gemini.google.com/" rel="noopener noreferrer" target="_blank">
+                Gemini
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+              </a>
+              <a class="gai-btn" href="https://www.perplexity.ai/" rel="noopener noreferrer" target="_blank">
+                Perplexity
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+            <p>
+              <em>
+                (Feel free to use any generative AI chat tool you have access to.)
+              </em>
+            </p>
+          </section>
+          <section class="gai-box" id="conversation-log">
+            <h3>
+              Keep Track: Your Conversation Log (Optional)
+            </h3>
+            <p>
+              It's helpful to note down how your conversation with the AI progresses. This helps you learn which refinement strategies work best for different situations. You can use a simple structure like this:
+            </p>
+            <ul>
+              <li>
+                <strong>
+                  My Goal:
+                </strong>
+                [What I wanted the AI to do]
+              </li>
+              <li>
+                <strong>
+                  Conversation Turn 1 (My Prompt):
+                </strong>
+                [My first prompt]
+              </li>
+              <li>
+                <strong>
+                  Conversation Turn 1 (AI Response Critique):
+                </strong>
+                [What was good/bad about the AI's reply?]
+              </li>
+              <li>
+                <strong>
+                  My Strategy for Turn 2:
+                </strong>
+                [Which refinement technique did I choose?]
+              </li>
+              <li>
+                <strong>
+                  Conversation Turn 2 (My Prompt):
+                </strong>
+                [My refined prompt]
+              </li>
+              <li>
+                <strong>
+                  Conversation Turn 2 (AI Response Critique):
+                </strong>
+                [How did this response improve? Still missing anything?]
+              </li>
+              <li>
+                <em>
+                  (Continue logging turns as needed)
+                </em>
+              </li>
+            </ul>
+          </section>
+          <section class="gai-box" id="conversation-flow">
+            <h3>
+              Visualizing Improvement: The Conversation Flow
+            </h3>
+            <p>
+              Think of this iterative process like charting the flow of your conversation. Each refinement is a step towards clearer communication and a better final outcome. While we don't have an automated visual tracker here, using the log above helps you mentally map out how you guided the AI from its initial response to the more useful information you needed.
+            </p>
+          </section>
+          <section class="gai-box" id="example-benchmarks">
+            <h2>
+              Example Benchmarks
+            </h2>
+            <div class="gai-accordion-group">
+              <details class="gai-accordion-item">
+                <summary class="gai-accordion-summary">
+                  <i class="fas fa-graduation-cap"></i>
+                  General Knowledge & Academic Exams
+                </summary>
+                <div class="gai-accordion-content">
+                  <p>
+                    <strong>
+                      MMLU (Massive Multitask Language Understanding):
+                    </strong>
+                    Tests knowledge across 57 subjects from elementary to professional level through multiple-choice questions. Think of it as a comprehensive general knowledge exam that covers everything from basic math to advanced law.
+                  </p>
+                  <p>
+                    <strong>
+                      AGIEval:
+                    </strong>
+                    Uses real standardized exams like the SAT, LSAT, and GRE. This benchmark tells us how well AI performs on the same tests humans take for college and graduate school admissions.
+                  </p>
+                  <p>
+                    <strong>
+                      Other Benchmarks in this category:
+                    </strong>
+                    RACE (Reading Comprehension from Examinations), Humanities Last Exam (designed as a "final exam" before human-level intelligence)
+                  </p>
+                  <div class="gai-info">
+                    <p>
+                      <strong>
+                        Why it matters:
+                      </strong>
+                      Shows breadth of knowledge but doesn't guarantee practical application or true understanding.
+                    </p>
+                  </div>
                 </div>
-                <p>Welcome! This module is designed for active learning. Here, you'll gain practical skills by diving straight into using generative AI tools. Expect to spend the majority of your time experimenting: navigating interfaces, constructing and refining prompts, and exploring customization features. Our hands-on approach ensures you build not just knowledge, but the confidence and competence to effectively interact with and leverage these powerful platforms. Let's get started!</p>
-            </div>
-        </header>
-
-        <nav class="gai-cont" aria-label="Module sections">
-            <div class="gai-box">
-                <h2 class="gai-h-with-icon"><i aria-hidden="true" class="fas fa-location-arrow"></i>Explore This Template</h2>
-                <div>
-                    <a class="gai-btn" href="#learning-outcomes">Learning Outcomes <i aria-hidden="true" class="fas fa-arrow-down"></i></a>
-                    <a class="gai-btn" href="#prompting-challenge">Prompting Challenge <i aria-hidden="true" class="fas fa-arrow-down"></i></a>
-                    <a class="gai-btn" href="#prompting-examples">Prompting Examples <i aria-hidden="true" class="fas fa-arrow-down"></i></a>
-                    <a class="gai-btn" href="#refinement-framework">Refinement Framework <i aria-hidden="true" class="fas fa-arrow-down"></i></a>
-                    <a class="gai-btn" href="#practice-area">Practice Area <i aria-hidden="true" class="fas fa-arrow-down"></i></a>
-                    <a class="gai-btn" href="#example-benchmarks">Example Benchmarks <i aria-hidden="true" class="fas fa-arrow-down"></i></a>
+              </details>
+              <details class="gai-accordion-item">
+                <summary class="gai-accordion-summary">
+                  <i class="fas fa-brain"></i>
+                  Reasoning & Truthfulness
+                </summary>
+                <div class="gai-accordion-content">
+                  <p>
+                    <strong>
+                      TruthfulQA:
+                    </strong>
+                    Contains 817 questions specifically designed to elicit common misconceptions and falsehoods. It tests whether AI will confidently state incorrect "facts" that sound plausible.
+                  </p>
+                  <p>
+                    <strong>
+                      HellaSwag:
+                    </strong>
+                    Evaluates common-sense reasoning about everyday scenarios through story completion tasks. Can the AI predict what happens next in ordinary situations?
+                  </p>
+                  <p>
+                    <strong>
+                      Other Benchmarks in this category:
+                    </strong>
+                    GPQA (Graduate-Level Google-Proof Q&A), BIG-bench (200+ diverse reasoning tasks), ARC (AI2 Reasoning Challenge for grade-school science)
+                  </p>
+                  <div class="gai-info">
+                    <p>
+                      <strong>
+                        Why it matters:
+                      </strong>
+                      Reveals tendency to hallucinate or perpetuate misinformation, critical for trust and reliability.
+                    </p>
+                  </div>
                 </div>
-                <p class="no-mb"><em>Use these quick links to jump to each highlighted example that demonstrates how <code>styles-base.css</code> can be applied.</em></p>
+              </details>
+              <details class="gai-accordion-item">
+                <summary class="gai-accordion-summary">
+                  <i class="fas fa-code"></i>
+                  Software Engineering & Code
+                </summary>
+                <div class="gai-accordion-content">
+                  <p>
+                    <strong>
+                      HumanEval:
+                    </strong>
+                    The gold standard with 164 programming problems. It's become the industry baseline for measuring code generation capabilities.
+                  </p>
+                  <p>
+                    <strong>
+                      SWE-bench:
+                    </strong>
+                    Tests real-world programming by having AI solve actual GitHub issues. The model must understand the codebase, identify the problem, and write a working patch.
+                  </p>
+                  <p>
+                    <strong>
+                      Other Benchmarks in this category:
+                    </strong>
+                    BigCodeBench (more challenging than HumanEval, better at distinguishing top-tier models)
+                  </p>
+                  <div class="gai-info">
+                    <p>
+                      <strong>
+                        Why it matters:
+                      </strong>
+                      Measures practical coding ability, not just syntax knowledge—can it actually help you program?
+                    </p>
+                  </div>
+                </div>
+              </details>
+              <details class="gai-accordion-item">
+                <summary class="gai-accordion-summary">
+                  <i class="fas fa-comments"></i>
+                  Conversational Quality
+                </summary>
+                <div class="gai-accordion-content">
+                  <p>
+                    <strong>
+                      MT-Bench:
+                    </strong>
+                    Evaluates multi-turn dialogue across reasoning, math, coding, and roleplay. Judges score paired outputs to determine which is better.
+                  </p>
+                  <p>
+                    <strong>
+                      Chatbot Arena (LMArena):
+                    </strong>
+                    Real users vote on which model gives better responses in head-to-head comparisons, without knowing which model is which.
+                  </p>
+                  <div class="gai-info">
+                    <p>
+                      <strong>
+                        Why it matters:
+                      </strong>
+                      Captures subjective quality that automated tests miss—the "feel" of talking to the AI.
+                    </p>
+                  </div>
+                </div>
+              </details>
+              <details class="gai-accordion-item">
+                <summary class="gai-accordion-summary">
+                  <i class="fas fa-images"></i>
+                  Multimodal & Specialized
+                </summary>
+                <div class="gai-accordion-content">
+                  <p>
+                    <strong>
+                      MMMU (Massive Multi-discipline Multimodal Understanding):
+                    </strong>
+                    Extension of MMLU that includes images, diagrams, and charts. Critical for evaluating modern multimodal models.
+                  </p>
+                  <p>
+                    <strong>
+                      Other Benchmarks in this category:
+                    </strong>
+                    Kaggle Game Arena (strategic reasoning through game-playing), HELM (Holistic Evaluation across multiple metrics including fairness and bias)
+                  </p>
+                  <div class="gai-info">
+                    <p>
+                      <strong>
+                        Why it matters:
+                      </strong>
+                      Tests whether AI can work with real-world content that combines text and visuals.
+                    </p>
+                  </div>
+                </div>
+              </details>
             </div>
-        </nav>
-
-        <main>
-            <div class="gai-cont">
-                <section class="gai-box" id="learning-outcomes">
-                    <h2 class="gai-h-with-icon"><i aria-hidden="true" class="fas fa-bullseye"></i>Learning Outcomes</h2>
-                    <ol>
-                        <li><strong>Navigate the user interface of common generative AI tools</strong> to locate key features for inputting prompts, viewing outputs, and accessing basic settings.</li>
-                        <li><strong>Construct clear, specific, and context-rich prompts</strong> designed to elicit desired responses from generative AI tools for defined tasks.</li>
-                        <li><strong>Employ iterative prompting strategies</strong>, refining and adjusting prompts based on initial AI outputs and analyzing failure points to improve the relevance, accuracy, and quality of generated content.</li>
-                        <li><strong>Utilize platform features for customization</strong> (e.g., custom instructions, creating specialized GPTs/Projects/Gems) to tailor the AI's responses and behavior for specific contexts or recurring tasks.</li>
-                    </ol>
-                </section>
-
-                <hr class="gai-hr" />
-
-                <section class="gai-box" id="prompting-challenge">
-                    <h2>Prompting Challenge</h2>
-                    <p>Let's dive into your first hands-on experience interacting with an AI tool.</p>
-                </section>
-
-                <section class="gai-box" id="summarization-challenge">
-                    <h2 class="gai-h2-underline">Your First AI Interaction: Summarization Challenge</h2>
-                    <p><strong>Task:</strong> Select a recent news article or journal finding that interests you. Using one of the generative AI tools linked below, create a concise summary (1-2 paragraphs) of the content. Focus on finding where to input your request and how to view the AI's response. You might need to copy and paste the article text or provide a link if the tool supports it.</p>
-                    <h3>Tool Options:</h3>
-                    <div>
-                        <a class="gai-btn" href="https://chatgpt.com/" rel="noopener noreferrer" target="_blank">ChatGPT <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
-                        <a class="gai-btn" href="https://claude.ai/" rel="noopener noreferrer" target="_blank">Claude <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
-                        <a class="gai-btn" href="https://gemini.google.com/" rel="noopener noreferrer" target="_blank">Gemini <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
-                    </div>
-                    <p><em>Feel free to use any tool you have access to.</em></p>
-                </section>
-
-                <aside class="gai-quick-activity" id="reflection-1">
-                    <h4><i aria-hidden="true" class="fas fa-lightbulb"></i> Reflect on Your Experience</h4>
-                    <p>Take a moment to think about your first attempt. Consider these questions (no need to write answers here, just think them through):</p>
-                    <ul>
-                        <li>How easy or difficult was it to find where to enter your prompt (your request) in the AI tool you chose? If you provided the article content, how did you do it (copy/paste, link)?</li>
-                        <li>What specific words or phrases did you use in your first prompt to ask for the summary? (e.g., "Summarize this article", "Give me the main points", "Explain this in simple terms")</li>
-                        <li>Look at the summary the AI generated. How well did it capture the main points of the article? Were there any surprises in the output (accuracy, tone, length)?</li>
-                        <li>Did you feel the need to try again or change your prompt immediately after seeing the first result? Why or why not? What might you change next time?</li>
-                    </ul>
-                </aside>
-
-                <section class="gai-box" id="debrief">
-                    <h2>Quick Debrief and Demo: The Power of Prompting</h2>
-                    <p>You've just had your first hands-on experience prompting a generative AI tool. Let's quickly debrief and look at how small changes in your prompt can significantly impact the AI's response.</p>
-                </section>
-
-                <section class="gai-box" id="prompting-examples">
-                    <h2>1. Prompting Examples: Basic vs. Detailed</h2>
-                    <p>Imagine you are in an environmental science class and have discovered a recent, lengthy report online about a new study on glacier melt. You want a quick summary to understand the key findings to see if it's relebvant to your current topic on climate change impacts before investing time.</p>
-                    <p><strong>Basic Prompt:</strong></p>
-                    <pre><code>Summarize this article.</code></pre>
-                    <p><em>(You would paste the article text or provide a link if the tool supports it)</em></p>
-                    <p><em>Potential Outcome:</em> You might get a general summary, but its length, focus, and tone could vary widely. It might be too long, too technical, or miss the points most relevant to educators.</p>
-                    <p><strong>Detailed Prompt:</strong></p>
-                    <pre><code>Summarize the key findings of the following news report for an environmental science student. The goal is to quickly understand if the report is relevant to a course topic on climate change impacts. Focus specifically on the main data presented and the predicted future impacts discussed in the article. Provide a two sentence summary, 3 key points (as bullet points), and one surprising fact.</code></pre>
-                    <p><em>(You would paste the article text or provide a link if your AI tool supports web browsing)</em></p>
-                    <p><em>Potential Outcome:</em> This prompt gives the AI much more direction:</p>
-                    <ul>
-                        <li><strong>Audience:</strong> "environmental science student" informs the AI about the user's background knowledge and the appropriate level of technical detail.</li>
-                        <li><strong>Goal</strong>:&nbsp;Stating the goal ("quickly understand if the report is relevant...") helps the AI prioritize information pertinent to making that judgment.</li>
-                        <li><strong>Task Focus:</strong>&nbsp;Specifying "main data presented" and "predicted future impacts" directs the AI to extract the most crucial information for the student's purpose.</li>
-                        <li><strong>Format:</strong> "Provide a two sentence summary..." ensures the summary is brief and easy to scan for relevance.</li>
-                    </ul>
-                    <p>The result is likely to be far more targeted, relevant, and immediately useful for your specific need.</p>
-                </section>
-
-                <aside class="gai-quick-activity" id="reflection-2">
-                    <h4>2. Reflect on Your Experience (Think about these questions):</h4>
-                    <ul>
-                        <li>Looking back at the "Summarization Challenge" you just completed, how specific was your initial prompt?</li>
-                        <li>Did you provide the AI with context (like who the summary was for, or what points to focus on)?</li>
-                        <li>Compare your first prompt to the "Detailed Prompt" example above. What are the key differences?</li>
-                        <li>How might providing more context, specifying the format, or defining a role for the AI have changed the summary you received in the challenge?</li>
-                        <li>Did the AI's first response make you want to adjust your prompt and try again? (This is iterative prompting in action!)</li>
-                    </ul>
-                </aside>
-
-                <section class="gai-box" id="key-takeaways">
-                    <h2>3. Key Takeaways on Prompting:</h2>
-                    <ul>
-                        <li><strong>Specificity Matters:</strong> Vague prompts lead to vague or unpredictable results. Clearly define what you want.</li>
-                        <li><strong>Context is Crucial:</strong> Tell the AI about the audience, the purpose, or the background information it needs to generate a relevant response.</li>
-                        <li><strong>Define the Format:</strong> Do you need bullet points, a paragraph, a table, code? Ask for it explicitly.</li>
-                        <li><strong>Assign a Role (Optional but Powerful):</strong> Asking the AI to "Act as..." can significantly shape the tone, style, and expertise level of the response.</li>
-                        <li><strong>Iteration is Key:</strong> Don't expect the perfect response on the first try. Analyze the output and refine your prompt based on what you see. This aligns with the iterative learning approach we've discussed.</li>
-                    </ul>
-                    <p>This quick debrief highlights how thoughtful prompting moves you from simply getting <em>an</em> answer to getting the <em>right</em> answer for your specific needs. As you continue through these pathways, you'll develop more advanced prompting strategies.</p>
-                </section>
-
-                <section class="gai-box" id="iterative-refinement">
-                    <h2>Iterative Prompt Refinement: Guiding the Conversation</h2>
-                    <p>You've seen how a detailed prompt gets a better initial response than a vague one. But what happens when even a detailed prompt doesn't quite hit the mark? That's where <strong>Iterative Prompt Refinement</strong> comes in. Think of it less like issuing commands and more like having a <strong>guided conversation</strong> with your AI assistant. Your first prompt starts the conversation, the AI's response gives you feedback, and your refined prompts steer the dialogue until the AI truly understands what you need.</p>
-                    <p>Mastering this back-and-forth is key to unlocking the AI's potential for complex or nuanced tasks.</p>
-                </section>
-
-                <section class="gai-box" id="refinement-framework">
-                    <h2>Framework: Strategies for a Better AI Conversation</h2>
-                    <p>How can you steer the conversation effectively? Here are several strategies to refine your prompts and guide the AI:</p>
-                    <ul>
-                        <li><strong>Add/Modify Context:</strong> Like clarifying things for a person, give the AI more background. Specify the intended <strong>audience</strong> (e.g., "Explain this for a beginner"), the <strong>purpose</strong> (e.g., "I need ideas for a presentation slide"), or relevant <strong>details</strong> it might be missing.</li>
-                        <li><strong>Adjust Format/Structure:</strong> Tell the AI <em>how</em> you want the information presented. Ask for <strong>bullet points</strong>, a <strong>table</strong>, a specific <strong>length</strong> (e.g., "in under 100 words"), or a certain <strong>structure</strong> (e.g., "pros and cons").</li>
-                        <li><strong>Refine AI Role/Persona:</strong> Ask the AI to adopt a specific viewpoint. Examples: "Act as a skeptical reviewer," "Act as an encouraging tutor," "Adopt the persona of a historian." This shapes the tone and focus.</li>
-                        <li><strong>Provide Examples (Few-Shot Prompting):</strong> Show, don't just tell. Give the AI a small example of the output format or style you're looking for right within your prompt.</li>
-                        <li><strong>Break Down Complexity:</strong> If a task is too big, ask for it piece by piece. "First, list the main themes."..."Okay, now elaborate on the first theme."</li>
-                        <li><strong>Engage in Dialogue (Make it a Two-Way Street):</strong>
-                            <ul>
-                                <li>Prompt the AI to ask <em>you</em> questions: "What other information do you need from me to answer this question effectively?" or "Ask me three questions that would help you refine your response."</li>
-                                <li>Ask the AI to critique itself or your prompt: "Critique your previous response for clarity." or "How could I improve my prompt to get a better explanation?"</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
-
-                <section class="gai-box" id="conversation-examples">
-                    <h2>Examples: Seeing the Conversation Unfold</h2>
-                    <p><strong>Example 1: Refining for Audience and Length in Summarization</strong></p>
-                    <p><strong>Goal:</strong> Summarize a somewhat technical news article about a new type of solar panel technology so you can quickly explain it to a friend who isn't a science major.</p>
-                    <p><strong>Attempt 1 Prompt:</strong></p>
-                    <pre><code>Summarize this article about the new perovskite solar panels: [Link to article or pasted text]</code></pre>
-                    <p><em>Potential Output:</em> A summary that accurately covers the technical details but uses jargon (like "band gap," "efficiency ratings," "fabrication methods") and might be several paragraphs long.</p>
-                    <p><strong>Possible Critique:</strong> Too technical for my friend, and longer than needed for a quick explanation.</p>
-                    <p><strong>Refinement Strategy Used:</strong> Add Context (Audience), Adjust Format (Length).</p>
-                    <p><strong>Attempt 2 Prompt (Refined):</strong></p>
-                    <pre><code>Summarize this article about the new perovskite solar panels, but explain it in simple terms for someone without a science background. Keep the summary under 75 words.</code></pre>
-                    <p><em>Potential Output:</em> A much shorter, simpler summary focusing on the key benefit (e.g., "Scientists developed new solar panels that are cheaper and easier to make, potentially making solar energy more accessible") without the heavy technical terms.</p>
-                    <p><strong>Example 2: Refining for Specific Focus in Summarization</strong></p>
-                    <p><strong>Goal:</strong> Summarize a broad article about how remote work is changing the future of work, but you only care about its impact on city planning and urban development.</p>
-                    <p><strong>Attempt 1 Prompt:</strong></p>
-                    <pre><code>Summarize the main points of this article about the future of remote work: [Link or text]</code></pre>
-                    <p><em>Potential Output:</em> A general summary covering various aspects like employee productivity, company culture, economic shifts, and maybe a brief mention of urban impact.</p>
-                    <p><strong>Critique:</strong> Covers too much; I only need the parts relevant to city planning for my specific interest/project.</p>
-                    <p><strong>Refinement Strategy Used:</strong> Add/Modify Context (Focus).</p>
-                    <p><strong>Attempt 2 Prompt (Refined):</strong></p>
-                    <pre><code>Summarize the arguments this article makes about how the rise of remote work could impact city planning and urban development. Focus only on that aspect.</code></pre>
-                    <p><em>Potential Output:</em> A targeted summary discussing points like potential changes in transportation needs, the repurposing of office buildings, shifts in residential patterns, and the economic impact on downtown areas, ignoring the other topics from the article.</p>
-                    <p><em>Next Step:</em> This focused summary is much more useful for the user's specific need than the general summary from the first attempt.</p>
-                </section>
-
-                <section class="gai-box" id="practice-area">
-                    <h2>Practice Area: Your Turn to Guide the Conversation</h2>
-                    <p>Now it's your turn to practice refining prompts. Think of it as steering the AI through conversation.</p>
-                    <ol>
-                        <li><strong>Choose a Task:</strong> Pick something relevant to your studies where an AI could assist (e.g., explaining a difficult concept from class, brainstorming arguments for a debate topic, drafting an email to a professor, summarizing a complex reading <em>for a specific purpose</em> like finding key data points).</li>
-                        <li><strong>Start the Conversation:</strong> Write your initial prompt in one of the AI tools linked below.</li>
-                        <li><strong>Analyze the Response:</strong> Read the AI's first output. Is it exactly what you wanted? Probably not! Where does it fall short? (Too vague? Wrong tone? Missing key info? Wrong format?)</li>
-                        <li><strong>Choose Your Next Move:</strong> Select 1-2 refinement strategies from the Framework list above. How can you clarify or redirect the AI? Consider getting it to ask you clarifying questions!</li>
-                        <li><strong>Continue the Conversation:</strong> Write and submit your refined prompt based on the strategy you chose.</li>
-                        <li><strong>Compare Outputs:</strong> Look at the first and second responses side-by-side. Did the conversation move in the right direction? How did your refinement change the outcome?</li>
-                        <li><strong>Keep Chatting (Optional):</strong> If it's still not quite right, repeat steps 4-6. Sometimes it takes a few exchanges to get the AI aligned with your goal.</li>
-                    </ol>
-                    <p><strong>AI Tools for Practice:</strong></p>
-                    <div>
-                        <a class="gai-btn" href="https://chatgpt.com/" rel="noopener noreferrer" target="_blank">ChatGPT <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
-                        <a class="gai-btn" href="https://claude.ai/" rel="noopener noreferrer" target="_blank">Claude <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
-                        <a class="gai-btn" href="https://gemini.google.com/" rel="noopener noreferrer" target="_blank">Gemini <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
-                        <a class="gai-btn" href="https://www.perplexity.ai/" rel="noopener noreferrer" target="_blank">Perplexity <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
-                    </div>
-                    <p><em>(Feel free to use any generative AI chat tool you have access to.)</em></p>
-                </section>
-
-                <section class="gai-box" id="conversation-log">
-                    <h3>Keep Track: Your Conversation Log (Optional)</h3>
-                    <p>It's helpful to note down how your conversation with the AI progresses. This helps you learn which refinement strategies work best for different situations. You can use a simple structure like this:</p>
-                    <ul>
-                        <li><strong>My Goal:</strong> [What I wanted the AI to do]</li>
-                        <li><strong>Conversation Turn 1 (My Prompt):</strong> [My first prompt]</li>
-                        <li><strong>Conversation Turn 1 (AI Response Critique):</strong> [What was good/bad about the AI's reply?]</li>
-                        <li><strong>My Strategy for Turn 2:</strong> [Which refinement technique did I choose?]</li>
-                        <li><strong>Conversation Turn 2 (My Prompt):</strong> [My refined prompt]</li>
-                        <li><strong>Conversation Turn 2 (AI Response Critique):</strong> [How did this response improve? Still missing anything?]</li>
-                        <li><em>(Continue logging turns as needed)</em></li>
-                    </ul>
-                </section>
-
-                <section class="gai-box" id="conversation-flow">
-                    <h3>Visualizing Improvement: The Conversation Flow</h3>
-                    <p>Think of this iterative process like charting the flow of your conversation. Each refinement is a step towards clearer communication and a better final outcome. While we don't have an automated visual tracker here, using the log above helps you mentally map out how you guided the AI from its initial response to the more useful information you needed.</p>
-                </section>
-
-                <section class="gai-box" id="example-benchmarks">
-                    <h2>Example Benchmarks</h2>
-                    <div class="gai-accordion-group">
-                        <details class="gai-accordion-item">
-                            <summary class="gai-accordion-summary"><i class="fas fa-graduation-cap"></i> General Knowledge &amp; Academic Exams</summary>
-                            <div class="gai-accordion-content">
-                                <p><strong>MMLU (Massive Multitask Language Understanding):</strong> Tests knowledge across 57 subjects from elementary to professional level through multiple-choice questions. Think of it as a comprehensive general knowledge exam that covers everything from basic math to advanced law.</p>
-                                <p><strong>AGIEval:</strong> Uses real standardized exams like the SAT, LSAT, and GRE. This benchmark tells us how well AI performs on the same tests humans take for college and graduate school admissions.</p>
-                                <p><strong>Other Benchmarks in this category:</strong> RACE (Reading Comprehension from Examinations), Humanities Last Exam (designed as a "final exam" before human-level intelligence)</p>
-                                <div class="gai-info">
-                                    <p><strong>Why it matters:</strong> Shows breadth of knowledge but doesn't guarantee practical application or true understanding.</p>
-                                </div>
-                            </div>
-                        </details>
-                        <details class="gai-accordion-item">
-                            <summary class="gai-accordion-summary"><i class="fas fa-brain"></i> Reasoning &amp; Truthfulness</summary>
-                            <div class="gai-accordion-content">
-                                <p><strong>TruthfulQA:</strong> Contains 817 questions specifically designed to elicit common misconceptions and falsehoods. It tests whether AI will confidently state incorrect "facts" that sound plausible.</p>
-                                <p><strong>HellaSwag:</strong> Evaluates common-sense reasoning about everyday scenarios through story completion tasks. Can the AI predict what happens next in ordinary situations?</p>
-                                <p><strong>Other Benchmarks in this category:</strong> GPQA (Graduate-Level Google-Proof Q&amp;A), BIG-bench (200+ diverse reasoning tasks), ARC (AI2 Reasoning Challenge for grade-school science)</p>
-                                <div class="gai-info">
-                                    <p><strong>Why it matters:</strong> Reveals tendency to hallucinate or perpetuate misinformation, critical for trust and reliability.</p>
-                                </div>
-                            </div>
-                        </details>
-                        <details class="gai-accordion-item">
-                            <summary class="gai-accordion-summary"><i class="fas fa-code"></i> Software Engineering &amp; Code</summary>
-                            <div class="gai-accordion-content">
-                                <p><strong>HumanEval:</strong> The gold standard with 164 programming problems. It's become the industry baseline for measuring code generation capabilities.</p>
-                                <p><strong>SWE-bench:</strong> Tests real-world programming by having AI solve actual GitHub issues. The model must understand the codebase, identify the problem, and write a working patch.</p>
-                                <p><strong>Other Benchmarks in this category:</strong> BigCodeBench (more challenging than HumanEval, better at distinguishing top-tier models)</p>
-                                <div class="gai-info">
-                                    <p><strong>Why it matters:</strong> Measures practical coding ability, not just syntax knowledge&mdash;can it actually help you program?</p>
-                                </div>
-                            </div>
-                        </details>
-                        <details class="gai-accordion-item">
-                            <summary class="gai-accordion-summary"><i class="fas fa-comments"></i> Conversational Quality</summary>
-                            <div class="gai-accordion-content">
-                                <p><strong>MT-Bench:</strong> Evaluates multi-turn dialogue across reasoning, math, coding, and roleplay. Judges score paired outputs to determine which is better.</p>
-                                <p><strong>Chatbot Arena (LMArena):</strong> Real users vote on which model gives better responses in head-to-head comparisons, without knowing which model is which.</p>
-                                <div class="gai-info">
-                                    <p><strong>Why it matters:</strong> Captures subjective quality that automated tests miss&mdash;the "feel" of talking to the AI.</p>
-                                </div>
-                            </div>
-                        </details>
-                        <details class="gai-accordion-item">
-                            <summary class="gai-accordion-summary"><i class="fas fa-images"></i> Multimodal &amp; Specialized</summary>
-                            <div class="gai-accordion-content">
-                                <p><strong>MMMU (Massive Multi-discipline Multimodal Understanding):</strong> Extension of MMLU that includes images, diagrams, and charts. Critical for evaluating modern multimodal models.</p>
-                                <p><strong>Other Benchmarks in this category:</strong> Kaggle Game Arena (strategic reasoning through game-playing), HELM (Holistic Evaluation across multiple metrics including fairness and bias)</p>
-                                <div class="gai-info">
-                                    <p><strong>Why it matters:</strong> Tests whether AI can work with real-world content that combines text and visuals.</p>
-                                </div>
-                            </div>
-                        </details>
-                    </div>
-                </section>
-            </div>
-        </main>
-
-        <footer class="gai-cont">
-            <div class="gai-references">
-                <h5>Keep Exploring</h5>
-                <p>Use this cleaned starter template to build AI literacy modules that align with the shared visual language defined in <code>styles-base.css</code>.</p>
-                <p>Need more patterns? Browse the existing modules in this site for additional examples and ready-to-use components.</p>
-            </div>
-        </footer>
+          </section>
+        </div>
+      </main>
+      <footer class="gai-cont">
+        <div class="gai-references">
+          <h3>
+            Keep Exploring
+          </h3>
+          <p>
+            Use this cleaned starter template to build AI literacy modules that align with the shared visual language defined in
+            <code>styles-base.css</code>
+            .
+          </p>
+          <p>
+            Need more patterns? Browse the existing modules in this site for additional examples and ready-to-use components.
+          </p>
+        </div>
+      </footer>
     </div>
     <script src="nav.js"></script>
-</body>
+  </body>
 </html>
