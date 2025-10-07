@@ -1,0 +1,229 @@
+File: ai-contribution-statement.html
+  - Div unwrapped: 2
+  - Empty italics removed: 2
+  - Footer elements moved: 1
+  - Headings adjusted: 2
+  - Validation warnings: none
+
+File: ai-generated-writing-effective-and-ethical-use-activities.html
+  - Empty italics removed: 19
+  - Footer elements moved: 1
+  - Headings adjusted: 18
+  - Validation warnings: none
+
+File: ai-generated-writing-effective-and-ethical-use-ai-for-brainstorming-amp-structuring-ideas.html
+  - Empty italics removed: 33
+  - Headings adjusted: 19
+  - Validation warnings: none
+
+File: ai-generated-writing-effective-and-ethical-use-drafting-support-brain-driven-prose-ai-assisted-polish.html
+  - Empty italics removed: 27
+  - Headings adjusted: 25
+  - Validation warnings: none
+
+File: ai-generated-writing-effective-and-ethical-use-the-core-of-ethical-ai-use-the-contribution-statement.html
+  - Empty italics removed: 7
+  - Headings adjusted: 3
+  - Validation warnings: none
+
+File: ai-generated-writing-effective-and-ethical-use.html
+  - Div unwrapped: 2
+  - Empty italics removed: 2
+  - Headings adjusted: 1
+  - Validation warnings: none
+
+File: ai-literacy-starter-template-clean.html
+  - Headings adjusted: 3
+  - Validation warnings: none
+
+File: ai-quick-queries-and-idea-sparker-ii-ai-as-a-quot-quick-information-scout-quot-testing-ai-x27-s-knowledge-amp-your-critical-skills.html
+  - Empty italics removed: 21
+  - Headings adjusted: 15
+  - Validation warnings: none
+
+File: ai-quick-queries-and-idea-sparker-iii-ai-as-a-brainstorming-partner-idea-sparker.html
+  - Empty italics removed: 22
+  - Headings adjusted: 14
+  - Validation warnings: none
+
+File: ai-quick-queries-and-idea-sparker-iv-wrap-up-sparking-your-own-brilliance.html
+  - Div unwrapped: 1
+  - Empty italics removed: 4
+  - Footer elements moved: 1
+  - Headings adjusted: 4
+  - Validation warnings: none
+
+File: ai-quick-queries-and-idea-sparker.html
+  - Div unwrapped: 2
+  - Empty italics removed: 6
+  - Headings adjusted: 1
+  - Validation warnings: none
+
+File: ai-research-assistants-what-a-deep-research-tool-does.html
+  - Div unwrapped: 4
+  - Empty italics removed: 3
+  - Footer elements moved: 1
+  - Headings adjusted: 5
+  - Validation warnings: none
+
+File: ai-research-assistants.html
+  - Div unwrapped: 1
+  - Empty italics removed: 12
+  - Headings adjusted: 3
+  - Validation warnings: none
+
+File: ai-risks-and-ethical-considerations-ai-risks-and-ethical-impacts-part-2.html
+  - Empty italics removed: 49
+  - Headings adjusted: 13
+  - Validation warnings: none
+
+File: ai-risks-and-ethical-considerations-other-resources.html
+  - Empty italics removed: 2
+  - Footer elements moved: 1
+  - Headings adjusted: 1
+  - Validation warnings: none
+
+File: ai-risks-and-ethical-considerations.html
+  - Div unwrapped: 1
+  - Empty italics removed: 41
+  - Headings adjusted: 12
+  - Validation warnings: none
+
+File: ai-study-buddy-and-skill-builder-1-socratic-dialogue-amp-questioning.html
+  - Div unwrapped: 2
+  - Empty italics removed: 21
+  - Headings adjusted: 17
+  - Validation warnings: none
+
+File: ai-study-buddy-and-skill-builder-1-unpacking-complex-ideas.html
+  - Div unwrapped: 2
+  - Empty italics removed: 26
+  - Footer elements moved: 2
+  - Headings adjusted: 21
+  - Validation warnings: none
+
+File: ai-study-buddy-and-skill-builder-enhancing-presentation-amp-speaking-skills.html
+  - Div unwrapped: 2
+  - Empty italics removed: 41
+  - Footer elements moved: 1
+  - Headings adjusted: 32
+  - Validation warnings: none
+
+File: ai-study-buddy-and-skill-builder.html
+  - Div unwrapped: 4
+  - Empty italics removed: 18
+  - Headings adjusted: 9
+  - Validation warnings: none
+
+File: ais-jagged-frontier-what-are-ai-benchmarks.html
+  - Div unwrapped: 4
+  - Empty italics removed: 27
+  - Footer elements moved: 1
+  - Headings adjusted: 29
+  - Validation warnings: none
+
+File: ais-jagged-frontier.html
+  - Div unwrapped: 1
+  - Empty italics removed: 12
+  - Headings adjusted: 15
+  - Validation warnings: none
+
+File: analyze-and-apply-gen-ai-customizing-and-organizing-your-ai-assistant.html
+  - Empty italics removed: 8
+  - Footer elements moved: 1
+  - Headings adjusted: 1
+  - Validation warnings: none
+
+File: analyze-and-apply-gen-ai.html
+  - Div unwrapped: 8
+  - Empty italics removed: 13
+  - Headings adjusted: 3
+  - Validation warnings: none
+
+File: authentic-learning-and-ai-use.html
+  - Div unwrapped: 3
+  - Empty italics removed: 4
+  - Footer elements moved: 1
+  - Headings adjusted: 5
+  - Validation warnings: none
+
+File: essentials-for-smart-engagement-the-pitfalls-navigating-ai-x27-s-limitations-and-ethical-minefields.html
+  - Div unwrapped: 1
+  - Empty italics removed: 3
+  - Headings adjusted: 4
+  - Validation warnings: none
+
+File: essentials-for-smart-engagement-the-promise-how-generative-ai-can-be-your-academic-ally.html
+  - Empty italics removed: 21
+  - Headings adjusted: 1
+  - Validation warnings: none
+
+File: essentials-for-smart-engagement-what-x27-s-next-your-journey-into-analyzing-amp-applying-ai.html
+  - Footer elements moved: 1
+  - Validation warnings: none
+
+File: essentials-for-smart-engagement-you-are-the-pilot-embracing-your-critical-role.html
+  - Div unwrapped: 1
+  - Empty italics removed: 1
+  - Headings adjusted: 1
+  - Validation warnings: none
+
+File: essentials-for-smart-engagement.html
+  - Div unwrapped: 3
+  - Empty italics removed: 8
+  - Headings adjusted: 2
+  - Validation warnings: none
+
+File: gen-ai-behind-the-curtain.html
+  - Alt added: 1
+  - Div unwrapped: 3
+  - Empty italics removed: 21
+  - Footer elements moved: 1
+  - Headings adjusted: 10
+  - Validation warnings: none
+
+File: gen-ai-fundamentals.html
+  - Div unwrapped: 4
+  - Empty italics removed: 21
+  - Footer elements moved: 1
+  - Headings adjusted: 15
+  - Validation warnings: none
+
+File: gen-ai-tools-platforms-and-interfaces.html
+  - Div unwrapped: 7
+  - Empty italics removed: 28
+  - Footer elements moved: 2
+  - Headings adjusted: 37
+  - Validation warnings: none
+
+File: index.html
+  - Empty italics removed: 6
+  - Footer elements moved: 1
+  - Headings adjusted: 3
+  - Validation warnings: none
+
+File: learning-is-hard-and-its-supposed-to-be.html
+  - Alt added: 1
+  - Div unwrapped: 4
+  - Empty headings removed: 1
+  - Empty italics removed: 9
+  - Footer elements moved: 1
+  - Headings adjusted: 3
+  - Validation warnings: none
+
+File: nav.html
+  - Validation warnings: none
+
+File: potential-and-limitations-of-gen-ai.html
+  - Alt added: 1
+  - Div unwrapped: 6
+  - Empty italics removed: 32
+  - Footer elements moved: 1
+  - Headings adjusted: 26
+  - Validation warnings: none
+
+File: understand-and-explore-generative-ai.html
+  - Div unwrapped: 1
+  - Footer elements moved: 1
+  - Headings adjusted: 1
+  - Validation warnings: none

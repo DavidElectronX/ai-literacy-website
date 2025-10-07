@@ -1,428 +1,682 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Gen AI - Behind the Curtain - AI Literacy for Students</title>
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-<header class="site-header">
-    <div class="site-header__inner">
-        <a class="site-header__title" href="index.html">AI Literacy for Students</a>
-        <p class="site-header__tagline">Understand, explore, and apply generative AI responsibly.</p>
-    </div>
-</header>
-<nav class="site-nav" aria-label="Primary" data-nav-placeholder>
-    <div class="site-nav__loading">Loading navigation…</div>
-    <noscript><div class="site-nav__noscript">Navigation requires JavaScript to display. Enable scripts in your browser to use this menu.</div></noscript>
-</nav>
-<div id="gai-wrap">
-    <main>
-        <div class="gai-cont">
-        <section class="gai-box">
-            <h2>Gen AI - Behind the Curtain</h2>
-            <div>
-
-            <div>
-            <div>
-        </section>
-        <section class="gai-box">
-            <h2>How Does Generative AI Work?</h2>
-            <p>(<a aria-label="Footnote explaining ELI-12" href="#eli-12">the ELI-12 version<sup>1</sup></a>)</p>
-
-            <div>
-            <h3><i></i>Training – The Creation of a GenAI Model</h3>
-            <img alt="Abstract illustration of AI model training process" loading="lazy" src="https://cdn.simulationtheory.ai/gasset/?asset=img&amp;prompt=stylized%20illustration%20of%20AI%20model%20training%20process%20with%20data%20flowing%20into%20a%20glowing%20neural%20network%2C%20clean%20tech%20style&amp;w=700&amp;h=250&amp;style=professional">
-            <p>When you use a Generative AI tool, you are using a tool that has been created by a complex and expensive process. To help you develop an understanding of this process, I’m going to rely a bit on an analogy that isn’t perfect but will help with your understanding, at least at a high level.</p>
-
-            <p>Think about how a child learns language – through exposure to countless conversations, books, and interactions. Large Language Models (LLMs) learn in a similar way, but instead of years of real-world experience, they learn from vast amounts of text from the internet, books, and other sources. Here’s a basic overview of how these AI models are trained:</p>
-
-            <ol>
-            	<li>
-            	<div><i></i></div>
-
-            	<div><strong>Gathering and Preparing the Data:</strong>
-
-            	<p>Companies collect enormous amounts of data from sources like books, websites, and articles. This data needs to be carefully cleaned and filtered – removing inappropriate content, errors, and low-quality information. Just like you wouldn’t want a child learning from incorrect or harmful material, the AI needs good quality data to learn from.</p>
-            	</div>
-            	</li>
-            	<li>
-            	<div><i></i></div>
-
-            	<div><strong>Basic Training:</strong>
-
-            	<p>The AI begins recognizing patterns in all this text – not just learning words, but understanding how they typically appear together and relate to each other. Unlike a child who learns strict grammar rules, the AI learns by spotting patterns in millions (or even billions) of examples. It starts recognizing which words often appear together, what typically follows certain phrases, and how ideas are usually expressed.</p>
-            	</div>
-            	</li>
-            	<li>
-            	<div><i></i></div>
-
-            	<div><strong>Alignment:</strong>
-
-            	<p>The model is then trained to be helpful and safe – like teaching good manners and proper behavior. The training involves guiding the AI towards providing useful, appropriate responses while limiting harmful or biased content. This process is called <em>alignment</em>.</p>
-            	</div>
-            	</li>
-            	<li>
-            	<div><i></i></div>
-
-            	<div><strong>Testing and Release:</strong>
-
-            	<p>The AI is thoroughly tested to make sure it works well and safely. Once ready, it’s made available for people to use, but continues to be monitored and improved over time.</p>
-            	</div>
-            	</li>
-            </ol>
-
-            <p>These AI models are continuously being improved and refined. However, it’s important to remember that despite this sophisticated training process, these models are still pattern-matching tools – they don’t truly understand or think like humans do. They’re incredibly powerful assistants, but they need human guidance and oversight to be used effectively.</p>
-            </div>
-
-            <hr>
-            <div>
-            <h3><i></i>Inference – Using a GenAI Model</h3>
-
-            <p>When you use a GenAI chatbot, you are interacting with a user interface but behind the scenes is a GenAI model working hard to calculate a response to your prompts. This calculation process is called inference.</p>
-
-            <p>Here is what happens during inference:</p>
-
-            <ol>
-            	<li>
-            	<div><i></i></div>
-
-            	<div><strong>Processing Your Input:</strong>
-
-            	<p>The model splits your text into small chunks called tokens (imagine splitting a sentence into individual words and parts of words – like breaking “playing” into “play” and “ing”). This helps the model understand your input piece by piece.</p>
-            	</div>
-            	</li>
-            	<li>
-            	<div><i></i></div>
-
-            	<div><strong>Using Its “Knowledge”:</strong>
-
-            	<p>The model then uses all the patterns it learned during its training – kind of like how you use everything you’ve learned in school to answer a question. But instead of actively searching through books, the model uses its “memory” (the patterns stored in its system) to figure out what might come next.</p>
-            	</div>
-            	</li>
-            	<li>
-            	<div><i></i></div>
-
-            	<div><strong>Making Smart Predictions:</strong>
-
-            	<p>The model looks at your input and what it has started writing, considering everything together (like how you consider the whole question before answering). It then figures out what would make the most sense to say next, one small piece at a time.</p>
-            	</div>
-            	</li>
-            	<li>
-            	<div><i></i></div>
-
-            	<div><strong>Adding Some Variety:</strong>
-
-            	<p>The model has special settings (like a creativity dial) that control how creative or focused its response should be. A higher setting means more creative and varied responses, while a lower setting means more focused and predictable ones.</p>
-            	</div>
-            	</li>
-            	<li>
-            	<div><i></i></div>
-
-            	<div><strong>Building the Response:</strong>
-
-            	<p>Finally, the model builds its response one small piece at a time. Each new piece it adds is influenced by everything that came before it – both in your prompt and in the response it’s creating. It’s like building with blocks, where each new block needs to fit with all the others.</p>
-            	</div>
-            	</li>
-            </ol>
-
-            <p><strong>Remember:</strong> The model isn’t thinking or understanding like a human does. It’s following patterns it learned during training to create responses that make sense based on your input. It’s more like a very sophisticated pattern-matching tool than a thinking brain.</p>
-            </div>
-
-            <hr>
-            <div>
-            <h3><i></i>Going Deeper</h3>
-            <img alt="Detective inspecting a clue" loading="lazy" src="https://d1qywhc7l90rsa.cloudfront.net/accounts/165495/images/DeepDive_Detective.png">
-            <h4><i></i>Must Read Articles</h4>
-
-            <ul>
-            	<li><a href="https://www.theguardian.com/technology/ng-interactive/2023/nov/01/how-ai-chatbots-like-chatgpt-or-bard-work-visual-explainer" rel="noreferrer noopener" target="_blank"><i></i><strong>If you only read one thing about how LLMs work, read this.</strong> A short explainer from the Guardian newspaper about how LLMs work</a></li>
-            	<li><a href="https://arstechnica.com/science/2023/07/a-jargon-free-explanation-of-how-ai-large-language-models-work/" rel="noreferrer noopener" target="_blank"><i></i><strong>A Jargon Free Explanation of How AI LLMs Work:</strong> If you really want to get into the weeds about how large language models work, but aren’t a machine learning expert. (10 minute read)</a></li>
-            </ul>
-
-            <h4><i></i>Videos on Generative AI and Large Language Models (LLMs)</h4>
-
-            <div>
-            <p>The web has countless resources to help you learn more about the inner workings of GenAI. Here are some of my favourites, organized by complexity and approach:</p>
-            </div>
-
-            <div>
-            <div>
-            <h5>Generative AI in a Nutshell</h5>
-
-            <p>This is one of those “drawing and talking” videos that discusses how GenAI works and how to use it. It’s a fun video that doesn’t require any technical background.</p>
-
-            <div><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" loading="lazy" sandbox="allow-scripts allow-same-origin" src="https://www.youtube.com/embed/2IK3DFHRFfw?si=N34eOPbeUYEEG74B" title="YouTube video player: Generative AI in a Nutshell"></iframe></div>
-            </div>
-
-            <div>
-            <h5>LLMs for Curious Beginners (3Blue1Brown)</h5>
-
-            <p>Grant Sanderson provides a brief overview of Large Language Models with his signature visual explanations. Perfect for those who want to understand the basics.</p>
-
-            <div><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" loading="lazy" sandbox="allow-scripts allow-same-origin" src="https://www.youtube.com/embed/LPZh9BOjkQs?si=Lez02I9HO_I3vdcf" title="YouTube video player: LLMs for Curious Beginners (3Blue1Brown)"></iframe></div>
-            </div>
-            </div>
-
-            <div>
-
-            <div id="expandableVideos">
-            <div>
-            <div>
-            <h5>Transformers and Attention (3Blue1Brown)</h5>
-
-            <p>A deeper dive into the transformer architecture and attention mechanism that powers modern LLMs. Requires some mathematical background.</p>
-
-            <div><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" loading="lazy" sandbox="allow-scripts allow-same-origin" src="https://www.youtube.com/embed/KJtZARuO3JY?si=IUA9UMf-_QfVpTzM" title="YouTube video player: Talk on Transformers and Attention"></iframe></div>
-            </div>
-
-            <div>
-            <h5>What is a Neural Network? (3Blue1Brown)</h5>
-
-            <p>First video in a comprehensive series on Deep Learning. This 2017 series was well ahead of the ChatGPT explosion and provides foundational knowledge.</p>
-
-            <div><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" loading="lazy" sandbox="allow-scripts allow-same-origin" src="https://www.youtube.com/embed/aircAruvnKk?si=WuigjZWEAoSpmkxl" title="YouTube video player: What is a neural network (3Blue1Brown)"></iframe></div>
-            </div>
-
-            <div>
-            <h5>The Busy Person’s Intro to LLMs</h5>
-
-            <p>Andrej Karpathy, OpenAI founder and former Tesla AI Director, provides a general-audience tutorial on LLMs with technical depth.</p>
-
-            <div><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" loading="lazy" sandbox="allow-scripts allow-same-origin" src="https://www.youtube.com/embed/zjkBMFhNj_g?si=sHiSPUsBguxMy672" title="YouTube video player: Intro to LLMs (Andrej Karpathy)"></iframe></div>
-            </div>
-            </div>
-            </div>
-            </div>
-
-            <h4><i></i>More Articles and Activities to Explore</h4>
-
-            <ul>
-            	<li><a href="https://platform.openai.com/tokenizer" rel="noopener" target="_blank"><i></i><strong>Text-to-Tokens Visualization:</strong> Want to see what a token is compared to a word? This interactive website, the OpenAI Tokenizer Tool, allows you to input text and see how it’s broken down into tokens.</a></li>
-            	<li><a href="https://perplexity.vercel.app/" rel="noopener" target="_blank"><i></i><strong>Visualize Text Probability:</strong> This one is fun! It provides an editable text block which initially is a description of how the tool works. When you click “Run visualization” it gives you the probability of each word appearing in the text along with all of the other likely words that might have appeared instead.</a></li>
-            	<li><a href="https://bbycroft.net/llm" rel="noopener" target="_blank"><i></i><strong>LLM Visualization tool:</strong> This is an animation of a large language model processing some text. To be honest, I thought it was a little hard to follow and you probably need some background knowledge to follow, but it <strong>looks really cool</strong>.</a></li>
-            	<li><a href="https://poloclub.github.io/dodrio/" rel="noopener" target="_blank"><i></i><strong>See the attention mechanism at work:</strong> When processing text, the model looks at how each word relates to other words…this process is the attention mechanism. This visualizer shows the inter-relatedness of words in a sentence but is another one that I don’t completely follow…but also <strong>looks cool</strong>.</a></li>
-            </ul>
-            </div>
-
-            <div>
-            <p id="eli-12"><sup>1</sup> ELI-12: Explain it to me Like I’m 12</p>
-            </div>
-            </div>
-            </div>
-
-
-
-                </div><div>
-                <p><img alt="" loading="lazy" src="https://d1qywhc7l90rsa.cloudfront.net/accounts/157304/images/AI_Timeline.png"></p>
-
-                </div><div>
-
-            <div>
-            <div>
-            <h1><svg focusable="false" height="1em" viewbox="0 0 576 512" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8V454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z" fill="currentColor"></path></svg>AI Literacy Glossary: An Introduction</h1>
-
-            <p>This glossary is designed to provide clear, concise definitions of key concepts, models, and techniques in Artificial Intelligence (AI) and Generative AI. It serves as a reference for educators, learners, and anyone seeking to build a foundational understanding of this rapidly evolving field.</p>
-
-            <p>AI is transforming industries and reshaping how we learn, work, and create. From understanding the basics of machine learning to exploring the cutting-edge capabilities of generative models, this glossary covers essential terms that demystify AI and its applications.</p>
-
-            <p>These definitions are intended to support your understanding of AI at a broad level and provide clarity on important terms and ideas. While they are not exhaustive or technical explanations, they aim to give you a solid starting point for engaging with AI concepts and exploring their relevance to real-world applications. Whether you&#x27;re navigating AI for the first time or deepening your knowledge, this glossary is here to make these complex ideas more accessible.</p>
-
-            <p>The Glossary is broken into 2 sections:</p>
-
-            <ol>
-            	<li>Commonly used AI terms - these are the terms that we encounter in everyday usage of generative AI</li>
-            	<li>(Moderately) Technical Terms - these are terms that you will encounter as a layperson if you are going for a deeper understanding of how generative AI works</li>
-            </ol>
-            <img alt="Infographic of AI terms" loading="lazy" src="https://d1qywhc7l90rsa.cloudfront.net/accounts/165495/images/image_fx_Tech_infographic_showing_AI_brain_center__connecting_to_5_icons_robot_teacher__human-digital_face__creative_workshop___chat_bubble___and_ethical_compass_._Minim.jpg">
-        </section>
-        <section class="gai-box">
-            <h2><svg focusable="false" height="1em" viewbox="0 0 640 512" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 38.6 14.7 74.3 39.6 103.4c-3.5 9.4-8.7 17.7-14.2 24.7c-4.8 6.2-9.7 11-13.3 14.3c-1.8 1.6-3.3 2.9-4.3 3.7c-.5 .4-.9 .7-1.1 .8l-.2 .2 0 0 0 0C1 327.2-1.4 334.4 .8 340.9S9.1 352 16 352c21.8 0 43.8-5.6 62.1-12.5c9.2-3.5 17.8-7.4 25.3-11.4C134.1 343.3 169.8 352 208 352zM448 176c0 112.3-99.1 196.9-216.5 207C255.8 457.4 336.4 512 432 512c38.2 0 73.9-8.7 104.7-23.9c7.5 4 16 7.9 25.2 11.4c18.3 6.9 40.3 12.5 62.1 12.5c6.9 0 13.1-4.5 15.2-11.1c2.1-6.6-.2-13.8-5.8-17.9l0 0 0 0-.2-.2c-.2-.2-.6-.4-1.1-.8c-1-.8-2.5-2-4.3-3.7c-3.6-3.3-8.5-8.1-13.3-14.3c-5.5-7-10.7-15.4-14.2-24.7c24.9-29 39.6-64.7 39.6-103.4c0-92.8-84.9-168.9-192.6-175.5c.4 5.1 .6 10.3 .6 15.5z" fill="currentColor"></path></svg>Commonly Used AI Terms</h2>
-            <h3>AI Agent</h3>
-
-            <p>Computer programs or systems that are capable of performing autonomous actions, making decisions, and interacting with their environment to achieve specific goals or tasks. They can adapt, learn, and optimize their performance over time.</p>
-
-            <hr>
-            <h3>AI Literacy</h3>
-
-            <p>The knowledge and skills required to understand, interact with, and critically evaluate AI tools and technologies in various contexts, including education.</p>
-
-            <hr>
-            <h3>Alignment</h3>
-
-            <p>The process of ensuring AI systems align with human values, ethical considerations, and intended goals, particularly in educational contexts.</p>
-
-            <hr>
-            <h3>Artificial General Intelligence (AGI)</h3>
-
-            <p>AGI refers to a (so far) hypothetical class of AI systems capable of understanding, learning, and applying knowledge across a broad range of tasks and domains, comparable to human cognitive abilities. Unlike Narrow AI, which excels at specific tasks, AGI would exhibit the versatility and adaptability needed to solve unfamiliar problems, reason abstractly, and transfer knowledge between domains.</p>
-
-            <p>The concept of AGI remains difficult to define precisely due to the complexity and breadth of human intelligence itself. AGI systems would not only need to achieve human-level performance in diverse areas but also demonstrate attributes such as common sense, self-awareness, and the ability to set and pursue goals autonomously.</p>
-
-            <p>Achieving AGI is widely regarded as the ultimate challenge in AI research. It would require breakthroughs in understanding cognition, developing highly scalable and flexible learning architectures, and addressing foundational issues such as alignment with human values and safety. While AGI remains a theoretical construct, its pursuit drives significant debate and innovation, with implications spanning scientific discovery, ethics, and the future of human-AI collaboration.</p>
-
-            <hr>
-            <h3>Artificial Intelligence</h3>
-
-            <p>Artificial Intelligence (AI) encompasses a broad field of computer science focused on creating systems capable of performing tasks that typically require human intelligence. These tasks include problem-solving, decision-making, understanding natural language, recognizing patterns, and adapting to new information. AI systems range from simple algorithms powering recommendations to sophisticated models generating human-like text or identifying diseases in medical imaging.</p>
-
-            <p>The definition of AI is fluid and evolves alongside advancements in technology and our understanding of intelligence. Historically, AI has been divided into two categories: <strong>Narrow AI</strong>, designed to excel at specific tasks (e.g., language translation, facial recognition), and the aspirational <strong>Artificial General Intelligence (AGI)</strong>, which would exhibit human-like cognitive versatility.</p>
-
-            <hr>
-            <h3>Bias</h3>
-
-            <p>Bias in AI refers to systematic errors in the output of AI models, often resulting from unrepresentative training data or flawed algorithms, leading to unfair or unequal treatment of certain groups or individuals.</p>
-
-            <hr>
-            <h3>Chatbots</h3>
-
-            <p>Chatbots are AI-powered programs designed to simulate human conversation, often used in customer service, information retrieval, and interactive communication online. This is the “chat” part of ChatGPT</p>
-
-            <hr>
-            <h3>Data Privacy</h3>
-
-            <p>Data privacy encompasses the practices and policies that ensure confidential and sensitive data, including personal information, is secure, protected, and used responsibly in AI and other digital systems.</p>
-
-            <hr>
-            <h3>Ethics in AI</h3>
-
-            <p>This refers to the moral principles guiding the design, deployment, and use of AI technologies, ensuring fairness, transparency, and respect for human rights.</p>
-
-            <hr>
-            <h3>Fine-Tuning</h3>
-
-            <p>The process of refining a pre-trained AI model to specialize in specific tasks or domains, often using a smaller dataset relevant to the intended application</p>
-
-            <hr>
-            <h3>Foundational Models</h3>
-
-            <p>Foundational Models are pre-trained machine learning models that serve as the base for customized applications across a diverse range of tasks and domains. These models are trained on extensive datasets to capture a broad spectrum of knowledge and skills, and they can be fine-tuned and adapted to specific tasks or industries. Foundational models are akin to generalists in the AI world, offering a versatile and robust starting point for specialized applications, including in natural language processing, computer vision, and beyond.</p>
-
-            <hr>
-            <h3>Frontier Models</h3>
-
-            <p>Frontier Models are cutting-edge AI systems that push the boundaries of machine learning capabilities, representing the latest advancements in scale, performance, and innovation. These models are designed to tackle highly complex tasks, often exceeding the capabilities of foundational models in specialized or emergent domains. Frontier models are typically developed using state-of-the-art techniques, massive computational resources, and novel architectures. They pave the way for groundbreaking applications in areas such as advanced robotics, multi-modal AI, and scientific discovery, while also setting new benchmarks for safety, alignment, and ethical considerations in AI development</p>
-
-            <hr>
-            <h3>Generative AI (GenAI)</h3>
-
-            <p>Generative Artificial Intelligence refers to a class of AI systems designed to create new content, such as text, images, audio, video, or code, based on patterns and knowledge learned from existing data. Unlike traditional AI systems that focus on classifying, predicting, or analyzing data, generative AI produces outputs that resemble human-created content, opening new frontiers in creativity and automation.</p>
-
-            <p>Generative AI systems, such as Large Language Models (LLMs) like GPT or image generators like DALL·E, rely on sophisticated architectures, such as transformers, to learn and replicate the underlying structure of data. These models are trained on vast datasets, enabling them to generate coherent, contextually relevant, and high-quality content in response to prompts or inputs.</p>
-
-            <hr>
-            <h3>Hallucinations</h3>
-
-            <p>In the context of AI, hallucinations refer to the instances where models generate incorrect, nonsensical, or unrealistic information. These mistakes can be very obvious or very subtle, so always review the output from a generative AI if you need it to be true and correct.</p>
-
-            <hr>
-            <h3>Large Language Models (LLMs)</h3>
-
-            <p>Large Language Models are complex AI systems that have been trained on enormous volumes of text data to comprehend, generate, and manipulate human-like text effectively. These models, equipped with millions or even billions of parameters, excel in tasks ranging from content creation and translation to question answering and beyond. LLMs can understand context, generate coherent and contextually relevant content, and are integral in various applications including conversational AI, automated content generation, and aiding in problem-solving scenarios.</p>
-
-            <hr>
-            <h3>Multi-Modal AI</h3>
-
-            <p>AI systems capable of processing and generating content across multiple data types (e.g., text, images, audio, video) to enable richer and more interactive educational experiences</p>
-
-            <hr>
-            <h3>Prompt</h3>
-
-            <p>the input or query provided to the chatbot by the user. It&#x27;s the message or question given to the chatbot to elicit a response or information. The chatbot then processes the prompt and generates a relevant reply based on its programming and the data it has been trained on</p>
-            </div>
-
-
-            <div><img alt="AI Chip surrounded by AI processes" loading="lazy" src="https://d1qywhc7l90rsa.cloudfront.net/accounts/165495/images/image_fx_Hexagonal_AI_core_with_flowing_data___surrounded_by_four_rings_showing_text_transformation___neural_networks___data_labeling___and_transparent_decision_processe.jpg">
-        </section>
-        <section class="gai-box">
-            <h2><svg focusable="false" height="1em" viewbox="0 0 448 512" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z" fill="currentColor"></path></svg>Moderately Technical Terms and Definitions</h2>
-            <h3>Alignment</h3>
-
-            <p>The process of ensuring that the objectives and outcomes of an AI system align with human values and intentions.</p>
-
-            <hr>
-            <h3>Artificial Neural Networks</h3>
-
-            <p>Computational models inspired by the human brain, designed for pattern recognition and decision-making.</p>
-
-            <hr>
-            <h3>Data Annotation</h3>
-
-            <p>The process of labeling data, such as adding descriptions to images or categories to text, to make it usable for machine learning.</p>
-
-            <hr>
-            <h3>Deep Learning</h3>
-
-            <p>A subset of machine learning involving neural networks with multiple layers, enabling complex pattern recognition.</p>
-
-            <hr>
-            <h3>Explainability</h3>
-
-            <p>The extent to which an AI system&#x27;s decisions or outputs can be understood and articulated by humans. This involves the system providing information about how it arrived at a result, enabling humans to interpret, explain, and trust its behavior and outcomes.</p>
-
-            <hr>
-            <h3>Generative Pre-Trained Transformer (GPT)</h3>
-
-            <p>A machine learning model that&#x27;s pre-trained to generate coherent and contextually relevant text based on a given prompt. This is the GPT part of ChatGPT. They&#x27;re designed to understand and generate human-like text. Here&#x27;s a simplified breakdown of its name and function:<br>
-            <strong>Generative</strong>: This refers to the model&#x27;s ability to create or generate new content. In the case of GPT, it can generate human-like text based on the input it receives. For instance, it can help in writing essays, answering questions, or even creating poetry.<br>
-            <strong>Pre-trained</strong>: Before a model like GPT can be used, it needs to be trained on a large dataset of text. &quot;Pre-trained&quot; refers to the fact that this training occurs before the model is fine-tuned for specific tasks. The pre-training helps the model learn about grammar, facts about the world, reasoning abilities, and also some common sense.<br>
-            <strong>Transformers</strong>: Transformer is the type of neural network architecture that GPT is based on. It&#x27;s particularly effective for handling sequential data like text or time series data. The Transformer architecture allows GPT to pay selective attention to different parts of the input text, which helps in understanding the context and generating coherent responses.</p>
-
-            <hr>
-            <h3>Inference</h3>
-
-            <p>Inference is the process where a trained AI model uses its learned knowledge to make predictions or generate outputs based on new input data. In the context of an LLM (Large Language Model), inference happens when the model takes a user’s input (prompt) and processes it to produce a meaningful response.</p>
-
-            <p>During inference, the model applies the parameters (like weights and biases) it learned during training to evaluate the input, recognize patterns, and generate an appropriate output. This process is what allows the model to &quot;understand&quot; and respond to prompts, answer questions, or generate creative content.</p>
-
-            <p>Inference is essentially the application phase of an AI model, turning training into practical use. It’s how the model uses what it has learned to interact with the world</p>
-
-            <hr>
-            <h3>Interpretability</h3>
-
-            <p>The degree to which the outputs and operations of a machine learning model can be understood by humans.</p>
-
-            <hr>
-            <h3>Machine Learning</h3>
-
-            <p>Machine Learning (ML) is a subset of Artificial Intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed to do so.</p>
-
-            <hr>
-            <h3>Natural Language Processing (NLP)</h3>
-
-            <p>A domain of AI enabling machines to understand, interpret, and generate human language.</p>
-
-            <hr>
-            <h3>Parameters</h3>
-
-            <p>The rules or settings that an LLM uses to &quot;understand&quot; and generate language. There are two main types of parameters in an LLM: weights and biases. Weights are numbers that show how strong the connections are between different parts of the LLM. Biases are numbers that help adjust the output of the LLM. Together, weights and biases control how the LLM processes and produces language. Generally, the more parameters an LLM has, the more powerful it becomes.</p>
-
-            <p>Parameters are the internal variables that the model learns through training. They help the model make predictions or decisions based on input data.</p>
-
-            <hr>
-            <h3>Training Data</h3>
-
-            <p>The dataset used to train machine learning models, containing examples to learn from.</p>
-
-            <hr>
-            <h3>Transformer</h3>
-
-            <p>A Transformer is a model architecture in machine learning that excels in handling sequential data, such as text. This is the breakthrough technology that has allowed chatbots like ChatGPT to become so powerful.</p>
-            </div>
-            </div>
-
-
-                </div>
-        </section>
-                <p class="gai-end-txt">Unless otherwise stated, this page and <a href="index.html">AI Literacy for Students</a> © 2025 by David Williams is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a><span class="gai-cc-icons"><img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons icon" /><img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Attribution icon" /><img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="Non-Commercial icon" /><img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="Share Alike icon" /></span></p>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      Gen AI - Behind the Curtain - AI Literacy for Students
+    </title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__title" href="index.html">
+          AI Literacy for Students
+        </a>
+        <p class="site-header__tagline">
+          Understand, explore, and apply generative AI responsibly.
+        </p>
+      </div>
+    </header>
+    <nav class="site-nav" aria-label="Primary" data-nav-placeholder="">
+      <div class="site-nav__loading">
+        Loading navigation…
+      </div>
+      <noscript>
+        <div class="site-nav__noscript">
+          Navigation requires JavaScript to display. Enable scripts in your browser to use this menu.
         </div>
-    </main>
-</div>
+      </noscript>
+    </nav>
+    <div id="gai-wrap">
+      <main>
+        <div class="gai-cont">
+          <section class="gai-box">
+            <h1>
+              Gen AI - Behind the Curtain
+            </h1>
+            <div></div>
+          </section>
+          <section class="gai-box">
+            <h2>
+              How Does Generative AI Work?
+            </h2>
+            <p>
+              (
+              <a aria-label="Footnote explaining ELI-12" href="#eli-12">
+                the ELI-12 version
+                <sup>
+                  1
+                </sup>
+              </a>
+              )
+            </p>
+            <div>
+              <h3>
+                Training – The Creation of a GenAI Model
+              </h3>
+              <img alt="Abstract illustration of AI model training process" loading="lazy" src="https://cdn.simulationtheory.ai/gasset/?asset=img&amp;prompt=stylized%20illustration%20of%20AI%20model%20training%20process%20with%20data%20flowing%20into%20a%20glowing%20neural%20network%2C%20clean%20tech%20style&amp;w=700&amp;h=250&amp;style=professional">
+              <p>
+                When you use a Generative AI tool, you are using a tool that has been created by a complex and expensive process. To help you develop an understanding of this process, I’m going to rely a bit on an analogy that isn’t perfect but will help with your understanding, at least at a high level.
+              </p>
+              <p>
+                Think about how a child learns language – through exposure to countless conversations, books, and interactions. Large Language Models (LLMs) learn in a similar way, but instead of years of real-world experience, they learn from vast amounts of text from the internet, books, and other sources. Here’s a basic overview of how these AI models are trained:
+              </p>
+              <ol>
+                <li>
+                  <div></div>
+                  <div>
+                    <strong>
+                      Gathering and Preparing the Data:
+                    </strong>
+                    <p>
+                      Companies collect enormous amounts of data from sources like books, websites, and articles. This data needs to be carefully cleaned and filtered – removing inappropriate content, errors, and low-quality information. Just like you wouldn’t want a child learning from incorrect or harmful material, the AI needs good quality data to learn from.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div></div>
+                  <div>
+                    <strong>
+                      Basic Training:
+                    </strong>
+                    <p>
+                      The AI begins recognizing patterns in all this text – not just learning words, but understanding how they typically appear together and relate to each other. Unlike a child who learns strict grammar rules, the AI learns by spotting patterns in millions (or even billions) of examples. It starts recognizing which words often appear together, what typically follows certain phrases, and how ideas are usually expressed.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div></div>
+                  <div>
+                    <strong>
+                      Alignment:
+                    </strong>
+                    <p>
+                      The model is then trained to be helpful and safe – like teaching good manners and proper behavior. The training involves guiding the AI towards providing useful, appropriate responses while limiting harmful or biased content. This process is called
+                      <em>
+                        alignment
+                      </em>
+                      .
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div></div>
+                  <div>
+                    <strong>
+                      Testing and Release:
+                    </strong>
+                    <p>
+                      The AI is thoroughly tested to make sure it works well and safely. Once ready, it’s made available for people to use, but continues to be monitored and improved over time.
+                    </p>
+                  </div>
+                </li>
+              </ol>
+              <p>
+                These AI models are continuously being improved and refined. However, it’s important to remember that despite this sophisticated training process, these models are still pattern-matching tools – they don’t truly understand or think like humans do. They’re incredibly powerful assistants, but they need human guidance and oversight to be used effectively.
+              </p>
+            </div>
+            <hr>
+            <div>
+              <h3>
+                Inference – Using a GenAI Model
+              </h3>
+              <p>
+                When you use a GenAI chatbot, you are interacting with a user interface but behind the scenes is a GenAI model working hard to calculate a response to your prompts. This calculation process is called inference.
+              </p>
+              <p>
+                Here is what happens during inference:
+              </p>
+              <ol>
+                <li>
+                  <div></div>
+                  <div>
+                    <strong>
+                      Processing Your Input:
+                    </strong>
+                    <p>
+                      The model splits your text into small chunks called tokens (imagine splitting a sentence into individual words and parts of words – like breaking “playing” into “play” and “ing”). This helps the model understand your input piece by piece.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div></div>
+                  <div>
+                    <strong>
+                      Using Its “Knowledge”:
+                    </strong>
+                    <p>
+                      The model then uses all the patterns it learned during its training – kind of like how you use everything you’ve learned in school to answer a question. But instead of actively searching through books, the model uses its “memory” (the patterns stored in its system) to figure out what might come next.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div></div>
+                  <div>
+                    <strong>
+                      Making Smart Predictions:
+                    </strong>
+                    <p>
+                      The model looks at your input and what it has started writing, considering everything together (like how you consider the whole question before answering). It then figures out what would make the most sense to say next, one small piece at a time.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div></div>
+                  <div>
+                    <strong>
+                      Adding Some Variety:
+                    </strong>
+                    <p>
+                      The model has special settings (like a creativity dial) that control how creative or focused its response should be. A higher setting means more creative and varied responses, while a lower setting means more focused and predictable ones.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div></div>
+                  <div>
+                    <strong>
+                      Building the Response:
+                    </strong>
+                    <p>
+                      Finally, the model builds its response one small piece at a time. Each new piece it adds is influenced by everything that came before it – both in your prompt and in the response it’s creating. It’s like building with blocks, where each new block needs to fit with all the others.
+                    </p>
+                  </div>
+                </li>
+              </ol>
+              <p>
+                <strong>
+                  Remember:
+                </strong>
+                The model isn’t thinking or understanding like a human does. It’s following patterns it learned during training to create responses that make sense based on your input. It’s more like a very sophisticated pattern-matching tool than a thinking brain.
+              </p>
+            </div>
+            <hr>
+            <div>
+              <h3>
+                Going Deeper
+              </h3>
+              <img alt="Detective inspecting a clue" loading="lazy" src="https://d1qywhc7l90rsa.cloudfront.net/accounts/165495/images/DeepDive_Detective.png">
+              <h3>
+                Must Read Articles
+              </h3>
+              <ul>
+                <li>
+                  <a href="https://www.theguardian.com/technology/ng-interactive/2023/nov/01/how-ai-chatbots-like-chatgpt-or-bard-work-visual-explainer" rel="noreferrer noopener" target="_blank">
+                    <strong>
+                      If you only read one thing about how LLMs work, read this.
+                    </strong>
+                    A short explainer from the Guardian newspaper about how LLMs work
+                  </a>
+                </li>
+                <li>
+                  <a href="https://arstechnica.com/science/2023/07/a-jargon-free-explanation-of-how-ai-large-language-models-work/" rel="noreferrer noopener" target="_blank">
+                    <strong>
+                      A Jargon Free Explanation of How AI LLMs Work:
+                    </strong>
+                    If you really want to get into the weeds about how large language models work, but aren’t a machine learning expert. (10 minute read)
+                  </a>
+                </li>
+              </ul>
+              <h3>
+                Videos on Generative AI and Large Language Models (LLMs)
+              </h3>
+              <div>
+                <p>
+                  The web has countless resources to help you learn more about the inner workings of GenAI. Here are some of my favourites, organized by complexity and approach:
+                </p>
+              </div>
+              <div>
+                <div>
+                  <h3>
+                    Generative AI in a Nutshell
+                  </h3>
+                  <p>
+                    This is one of those “drawing and talking” videos that discusses how GenAI works and how to use it. It’s a fun video that doesn’t require any technical background.
+                  </p>
+                  <div>
+                    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" loading="lazy" sandbox="allow-scripts allow-same-origin" src="https://www.youtube.com/embed/2IK3DFHRFfw?si=N34eOPbeUYEEG74B" title="YouTube video player: Generative AI in a Nutshell"></iframe>
+                  </div>
+                </div>
+                <div>
+                  <h3>
+                    LLMs for Curious Beginners (3Blue1Brown)
+                  </h3>
+                  <p>
+                    Grant Sanderson provides a brief overview of Large Language Models with his signature visual explanations. Perfect for those who want to understand the basics.
+                  </p>
+                  <div>
+                    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" loading="lazy" sandbox="allow-scripts allow-same-origin" src="https://www.youtube.com/embed/LPZh9BOjkQs?si=Lez02I9HO_I3vdcf" title="YouTube video player: LLMs for Curious Beginners (3Blue1Brown)"></iframe>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div id="expandableVideos">
+                  <div>
+                    <div>
+                      <h3>
+                        Transformers and Attention (3Blue1Brown)
+                      </h3>
+                      <p>
+                        A deeper dive into the transformer architecture and attention mechanism that powers modern LLMs. Requires some mathematical background.
+                      </p>
+                      <div>
+                        <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" loading="lazy" sandbox="allow-scripts allow-same-origin" src="https://www.youtube.com/embed/KJtZARuO3JY?si=IUA9UMf-_QfVpTzM" title="YouTube video player: Talk on Transformers and Attention"></iframe>
+                      </div>
+                    </div>
+                    <div>
+                      <h3>
+                        What is a Neural Network? (3Blue1Brown)
+                      </h3>
+                      <p>
+                        First video in a comprehensive series on Deep Learning. This 2017 series was well ahead of the ChatGPT explosion and provides foundational knowledge.
+                      </p>
+                      <div>
+                        <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" loading="lazy" sandbox="allow-scripts allow-same-origin" src="https://www.youtube.com/embed/aircAruvnKk?si=WuigjZWEAoSpmkxl" title="YouTube video player: What is a neural network (3Blue1Brown)"></iframe>
+                      </div>
+                    </div>
+                    <div>
+                      <h3>
+                        The Busy Person’s Intro to LLMs
+                      </h3>
+                      <p>
+                        Andrej Karpathy, OpenAI founder and former Tesla AI Director, provides a general-audience tutorial on LLMs with technical depth.
+                      </p>
+                      <div>
+                        <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" loading="lazy" sandbox="allow-scripts allow-same-origin" src="https://www.youtube.com/embed/zjkBMFhNj_g?si=sHiSPUsBguxMy672" title="YouTube video player: Intro to LLMs (Andrej Karpathy)"></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>
+                More Articles and Activities to Explore
+              </h3>
+              <ul>
+                <li>
+                  <a href="https://platform.openai.com/tokenizer" rel="noopener" target="_blank">
+                    <strong>
+                      Text-to-Tokens Visualization:
+                    </strong>
+                    Want to see what a token is compared to a word? This interactive website, the OpenAI Tokenizer Tool, allows you to input text and see how it’s broken down into tokens.
+                  </a>
+                </li>
+                <li>
+                  <a href="https://perplexity.vercel.app/" rel="noopener" target="_blank">
+                    <strong>
+                      Visualize Text Probability:
+                    </strong>
+                    This one is fun! It provides an editable text block which initially is a description of how the tool works. When you click “Run visualization” it gives you the probability of each word appearing in the text along with all of the other likely words that might have appeared instead.
+                  </a>
+                </li>
+                <li>
+                  <a href="https://bbycroft.net/llm" rel="noopener" target="_blank">
+                    <strong>
+                      LLM Visualization tool:
+                    </strong>
+                    This is an animation of a large language model processing some text. To be honest, I thought it was a little hard to follow and you probably need some background knowledge to follow, but it
+                    <strong>
+                      looks really cool
+                    </strong>
+                    .
+                  </a>
+                </li>
+                <li>
+                  <a href="https://poloclub.github.io/dodrio/" rel="noopener" target="_blank">
+                    <strong>
+                      See the attention mechanism at work:
+                    </strong>
+                    When processing text, the model looks at how each word relates to other words…this process is the attention mechanism. This visualizer shows the inter-relatedness of words in a sentence but is another one that I don’t completely follow…but also
+                    <strong>
+                      looks cool
+                    </strong>
+                    .
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p id="eli-12">
+                <sup>
+                  1
+                </sup>
+                ELI-12: Explain it to me Like I’m 12
+              </p>
+            </div>
+          </section>
+        </div>
+        <footer>
+          <p class="gai-end-txt">
+            Unless otherwise stated, this page and
+            <a href="index.html">
+              AI Literacy for Students
+            </a>
+            © 2025 by David Williams is licensed under
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+              Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+            </a>
+            <span class="gai-cc-icons">
+              <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons icon">
+              <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Attribution icon">
+              <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="Non-Commercial icon">
+              <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="Share Alike icon">
+            </span>
+          </p>
+        </footer>
+      </main>
+    </div>
+    <div>
+      <p>
+        <img alt="Image description" loading="lazy" src="https://d1qywhc7l90rsa.cloudfront.net/accounts/157304/images/AI_Timeline.png">
+      </p>
+    </div>
+    <div>
+      <div>
+        <h2>
+          <svg focusable="false" height="1em" viewbox="0 0 576 512" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8V454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z" fill="currentColor"></path>
+          </svg>
+          AI Literacy Glossary: An Introduction
+        </h2>
+        <p>
+          This glossary is designed to provide clear, concise definitions of key concepts, models, and techniques in Artificial Intelligence (AI) and Generative AI. It serves as a reference for educators, learners, and anyone seeking to build a foundational understanding of this rapidly evolving field.
+        </p>
+        <p>
+          AI is transforming industries and reshaping how we learn, work, and create. From understanding the basics of machine learning to exploring the cutting-edge capabilities of generative models, this glossary covers essential terms that demystify AI and its applications.
+        </p>
+        <p>
+          These definitions are intended to support your understanding of AI at a broad level and provide clarity on important terms and ideas. While they are not exhaustive or technical explanations, they aim to give you a solid starting point for engaging with AI concepts and exploring their relevance to real-world applications. Whether you're navigating AI for the first time or deepening your knowledge, this glossary is here to make these complex ideas more accessible.
+        </p>
+        <p>
+          The Glossary is broken into 2 sections:
+        </p>
+        <ol>
+          <li>
+            Commonly used AI terms - these are the terms that we encounter in everyday usage of generative AI
+          </li>
+          <li>
+            (Moderately) Technical Terms - these are terms that you will encounter as a layperson if you are going for a deeper understanding of how generative AI works
+          </li>
+        </ol>
+        <img alt="Infographic of AI terms" loading="lazy" src="https://d1qywhc7l90rsa.cloudfront.net/accounts/165495/images/image_fx_Tech_infographic_showing_AI_brain_center__connecting_to_5_icons_robot_teacher__human-digital_face__creative_workshop___chat_bubble___and_ethical_compass_._Minim.jpg">
+        <section class="gai-box">
+          <h2>
+            <svg focusable="false" height="1em" viewbox="0 0 640 512" width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path d="M208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 38.6 14.7 74.3 39.6 103.4c-3.5 9.4-8.7 17.7-14.2 24.7c-4.8 6.2-9.7 11-13.3 14.3c-1.8 1.6-3.3 2.9-4.3 3.7c-.5 .4-.9 .7-1.1 .8l-.2 .2 0 0 0 0C1 327.2-1.4 334.4 .8 340.9S9.1 352 16 352c21.8 0 43.8-5.6 62.1-12.5c9.2-3.5 17.8-7.4 25.3-11.4C134.1 343.3 169.8 352 208 352zM448 176c0 112.3-99.1 196.9-216.5 207C255.8 457.4 336.4 512 432 512c38.2 0 73.9-8.7 104.7-23.9c7.5 4 16 7.9 25.2 11.4c18.3 6.9 40.3 12.5 62.1 12.5c6.9 0 13.1-4.5 15.2-11.1c2.1-6.6-.2-13.8-5.8-17.9l0 0 0 0-.2-.2c-.2-.2-.6-.4-1.1-.8c-1-.8-2.5-2-4.3-3.7c-3.6-3.3-8.5-8.1-13.3-14.3c-5.5-7-10.7-15.4-14.2-24.7c24.9-29 39.6-64.7 39.6-103.4c0-92.8-84.9-168.9-192.6-175.5c.4 5.1 .6 10.3 .6 15.5z" fill="currentColor"></path>
+            </svg>
+            Commonly Used AI Terms
+          </h2>
+          <h3>
+            AI Agent
+          </h3>
+          <p>
+            Computer programs or systems that are capable of performing autonomous actions, making decisions, and interacting with their environment to achieve specific goals or tasks. They can adapt, learn, and optimize their performance over time.
+          </p>
+          <hr>
+          <h3>
+            AI Literacy
+          </h3>
+          <p>
+            The knowledge and skills required to understand, interact with, and critically evaluate AI tools and technologies in various contexts, including education.
+          </p>
+          <hr>
+          <h3>
+            Alignment
+          </h3>
+          <p>
+            The process of ensuring AI systems align with human values, ethical considerations, and intended goals, particularly in educational contexts.
+          </p>
+          <hr>
+          <h3>
+            Artificial General Intelligence (AGI)
+          </h3>
+          <p>
+            AGI refers to a (so far) hypothetical class of AI systems capable of understanding, learning, and applying knowledge across a broad range of tasks and domains, comparable to human cognitive abilities. Unlike Narrow AI, which excels at specific tasks, AGI would exhibit the versatility and adaptability needed to solve unfamiliar problems, reason abstractly, and transfer knowledge between domains.
+          </p>
+          <p>
+            The concept of AGI remains difficult to define precisely due to the complexity and breadth of human intelligence itself. AGI systems would not only need to achieve human-level performance in diverse areas but also demonstrate attributes such as common sense, self-awareness, and the ability to set and pursue goals autonomously.
+          </p>
+          <p>
+            Achieving AGI is widely regarded as the ultimate challenge in AI research. It would require breakthroughs in understanding cognition, developing highly scalable and flexible learning architectures, and addressing foundational issues such as alignment with human values and safety. While AGI remains a theoretical construct, its pursuit drives significant debate and innovation, with implications spanning scientific discovery, ethics, and the future of human-AI collaboration.
+          </p>
+          <hr>
+          <h3>
+            Artificial Intelligence
+          </h3>
+          <p>
+            Artificial Intelligence (AI) encompasses a broad field of computer science focused on creating systems capable of performing tasks that typically require human intelligence. These tasks include problem-solving, decision-making, understanding natural language, recognizing patterns, and adapting to new information. AI systems range from simple algorithms powering recommendations to sophisticated models generating human-like text or identifying diseases in medical imaging.
+          </p>
+          <p>
+            The definition of AI is fluid and evolves alongside advancements in technology and our understanding of intelligence. Historically, AI has been divided into two categories:
+            <strong>
+              Narrow AI
+            </strong>
+            , designed to excel at specific tasks (e.g., language translation, facial recognition), and the aspirational
+            <strong>
+              Artificial General Intelligence (AGI)
+            </strong>
+            , which would exhibit human-like cognitive versatility.
+          </p>
+          <hr>
+          <h3>
+            Bias
+          </h3>
+          <p>
+            Bias in AI refers to systematic errors in the output of AI models, often resulting from unrepresentative training data or flawed algorithms, leading to unfair or unequal treatment of certain groups or individuals.
+          </p>
+          <hr>
+          <h3>
+            Chatbots
+          </h3>
+          <p>
+            Chatbots are AI-powered programs designed to simulate human conversation, often used in customer service, information retrieval, and interactive communication online. This is the “chat” part of ChatGPT
+          </p>
+          <hr>
+          <h3>
+            Data Privacy
+          </h3>
+          <p>
+            Data privacy encompasses the practices and policies that ensure confidential and sensitive data, including personal information, is secure, protected, and used responsibly in AI and other digital systems.
+          </p>
+          <hr>
+          <h3>
+            Ethics in AI
+          </h3>
+          <p>
+            This refers to the moral principles guiding the design, deployment, and use of AI technologies, ensuring fairness, transparency, and respect for human rights.
+          </p>
+          <hr>
+          <h3>
+            Fine-Tuning
+          </h3>
+          <p>
+            The process of refining a pre-trained AI model to specialize in specific tasks or domains, often using a smaller dataset relevant to the intended application
+          </p>
+          <hr>
+          <h3>
+            Foundational Models
+          </h3>
+          <p>
+            Foundational Models are pre-trained machine learning models that serve as the base for customized applications across a diverse range of tasks and domains. These models are trained on extensive datasets to capture a broad spectrum of knowledge and skills, and they can be fine-tuned and adapted to specific tasks or industries. Foundational models are akin to generalists in the AI world, offering a versatile and robust starting point for specialized applications, including in natural language processing, computer vision, and beyond.
+          </p>
+          <hr>
+          <h3>
+            Frontier Models
+          </h3>
+          <p>
+            Frontier Models are cutting-edge AI systems that push the boundaries of machine learning capabilities, representing the latest advancements in scale, performance, and innovation. These models are designed to tackle highly complex tasks, often exceeding the capabilities of foundational models in specialized or emergent domains. Frontier models are typically developed using state-of-the-art techniques, massive computational resources, and novel architectures. They pave the way for groundbreaking applications in areas such as advanced robotics, multi-modal AI, and scientific discovery, while also setting new benchmarks for safety, alignment, and ethical considerations in AI development
+          </p>
+          <hr>
+          <h3>
+            Generative AI (GenAI)
+          </h3>
+          <p>
+            Generative Artificial Intelligence refers to a class of AI systems designed to create new content, such as text, images, audio, video, or code, based on patterns and knowledge learned from existing data. Unlike traditional AI systems that focus on classifying, predicting, or analyzing data, generative AI produces outputs that resemble human-created content, opening new frontiers in creativity and automation.
+          </p>
+          <p>
+            Generative AI systems, such as Large Language Models (LLMs) like GPT or image generators like DALL·E, rely on sophisticated architectures, such as transformers, to learn and replicate the underlying structure of data. These models are trained on vast datasets, enabling them to generate coherent, contextually relevant, and high-quality content in response to prompts or inputs.
+          </p>
+          <hr>
+          <h3>
+            Hallucinations
+          </h3>
+          <p>
+            In the context of AI, hallucinations refer to the instances where models generate incorrect, nonsensical, or unrealistic information. These mistakes can be very obvious or very subtle, so always review the output from a generative AI if you need it to be true and correct.
+          </p>
+          <hr>
+          <h3>
+            Large Language Models (LLMs)
+          </h3>
+          <p>
+            Large Language Models are complex AI systems that have been trained on enormous volumes of text data to comprehend, generate, and manipulate human-like text effectively. These models, equipped with millions or even billions of parameters, excel in tasks ranging from content creation and translation to question answering and beyond. LLMs can understand context, generate coherent and contextually relevant content, and are integral in various applications including conversational AI, automated content generation, and aiding in problem-solving scenarios.
+          </p>
+          <hr>
+          <h3>
+            Multi-Modal AI
+          </h3>
+          <p>
+            AI systems capable of processing and generating content across multiple data types (e.g., text, images, audio, video) to enable richer and more interactive educational experiences
+          </p>
+          <hr>
+          <h3>
+            Prompt
+          </h3>
+          <p>
+            the input or query provided to the chatbot by the user. It's the message or question given to the chatbot to elicit a response or information. The chatbot then processes the prompt and generates a relevant reply based on its programming and the data it has been trained on
+          </p>
+        </section>
+      </div>
+      <div>
+        <img alt="AI Chip surrounded by AI processes" loading="lazy" src="https://d1qywhc7l90rsa.cloudfront.net/accounts/165495/images/image_fx_Hexagonal_AI_core_with_flowing_data___surrounded_by_four_rings_showing_text_transformation___neural_networks___data_labeling___and_transparent_decision_processe.jpg">
+        <section class="gai-box">
+          <h2>
+            <svg focusable="false" height="1em" viewbox="0 0 448 512" width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z" fill="currentColor"></path>
+            </svg>
+            Moderately Technical Terms and Definitions
+          </h2>
+          <h3>
+            Alignment
+          </h3>
+          <p>
+            The process of ensuring that the objectives and outcomes of an AI system align with human values and intentions.
+          </p>
+          <hr>
+          <h3>
+            Artificial Neural Networks
+          </h3>
+          <p>
+            Computational models inspired by the human brain, designed for pattern recognition and decision-making.
+          </p>
+          <hr>
+          <h3>
+            Data Annotation
+          </h3>
+          <p>
+            The process of labeling data, such as adding descriptions to images or categories to text, to make it usable for machine learning.
+          </p>
+          <hr>
+          <h3>
+            Deep Learning
+          </h3>
+          <p>
+            A subset of machine learning involving neural networks with multiple layers, enabling complex pattern recognition.
+          </p>
+          <hr>
+          <h3>
+            Explainability
+          </h3>
+          <p>
+            The extent to which an AI system's decisions or outputs can be understood and articulated by humans. This involves the system providing information about how it arrived at a result, enabling humans to interpret, explain, and trust its behavior and outcomes.
+          </p>
+          <hr>
+          <h3>
+            Generative Pre-Trained Transformer (GPT)
+          </h3>
+          <p>
+            A machine learning model that's pre-trained to generate coherent and contextually relevant text based on a given prompt. This is the GPT part of ChatGPT. They're designed to understand and generate human-like text. Here's a simplified breakdown of its name and function:
+            <br>
+            <strong>
+              Generative
+            </strong>
+            : This refers to the model's ability to create or generate new content. In the case of GPT, it can generate human-like text based on the input it receives. For instance, it can help in writing essays, answering questions, or even creating poetry.
+            <br>
+            <strong>
+              Pre-trained
+            </strong>
+            : Before a model like GPT can be used, it needs to be trained on a large dataset of text. "Pre-trained" refers to the fact that this training occurs before the model is fine-tuned for specific tasks. The pre-training helps the model learn about grammar, facts about the world, reasoning abilities, and also some common sense.
+            <br>
+            <strong>
+              Transformers
+            </strong>
+            : Transformer is the type of neural network architecture that GPT is based on. It's particularly effective for handling sequential data like text or time series data. The Transformer architecture allows GPT to pay selective attention to different parts of the input text, which helps in understanding the context and generating coherent responses.
+          </p>
+          <hr>
+          <h3>
+            Inference
+          </h3>
+          <p>
+            Inference is the process where a trained AI model uses its learned knowledge to make predictions or generate outputs based on new input data. In the context of an LLM (Large Language Model), inference happens when the model takes a user’s input (prompt) and processes it to produce a meaningful response.
+          </p>
+          <p>
+            During inference, the model applies the parameters (like weights and biases) it learned during training to evaluate the input, recognize patterns, and generate an appropriate output. This process is what allows the model to "understand" and respond to prompts, answer questions, or generate creative content.
+          </p>
+          <p>
+            Inference is essentially the application phase of an AI model, turning training into practical use. It’s how the model uses what it has learned to interact with the world
+          </p>
+          <hr>
+          <h3>
+            Interpretability
+          </h3>
+          <p>
+            The degree to which the outputs and operations of a machine learning model can be understood by humans.
+          </p>
+          <hr>
+          <h3>
+            Machine Learning
+          </h3>
+          <p>
+            Machine Learning (ML) is a subset of Artificial Intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed to do so.
+          </p>
+          <hr>
+          <h3>
+            Natural Language Processing (NLP)
+          </h3>
+          <p>
+            A domain of AI enabling machines to understand, interpret, and generate human language.
+          </p>
+          <hr>
+          <h3>
+            Parameters
+          </h3>
+          <p>
+            The rules or settings that an LLM uses to "understand" and generate language. There are two main types of parameters in an LLM: weights and biases. Weights are numbers that show how strong the connections are between different parts of the LLM. Biases are numbers that help adjust the output of the LLM. Together, weights and biases control how the LLM processes and produces language. Generally, the more parameters an LLM has, the more powerful it becomes.
+          </p>
+          <p>
+            Parameters are the internal variables that the model learns through training. They help the model make predictions or decisions based on input data.
+          </p>
+          <hr>
+          <h3>
+            Training Data
+          </h3>
+          <p>
+            The dataset used to train machine learning models, containing examples to learn from.
+          </p>
+          <hr>
+          <h3>
+            Transformer
+          </h3>
+          <p>
+            A Transformer is a model architecture in machine learning that excels in handling sequential data, such as text. This is the breakthrough technology that has allowed chatbots like ChatGPT to become so powerful.
+          </p>
+        </section>
+      </div>
+    </div>
     <script src="nav.js"></script>
-</body>
+  </body>
 </html>
